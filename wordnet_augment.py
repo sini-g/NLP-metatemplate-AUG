@@ -1,33 +1,24 @@
+import nltk
 import json
 import random
 import spacy
 import numpy as np
 from typing import List, Dict, Any
-import babelnet as bn
-from babelnet.language import Language
+from nltk.corpus import wordnet as wn
 from sentence_transformers import SentenceTransformer, util
-from babelnet.pos import POS
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
-
-class BabelNetAugmenter:
-    """Classe per data augmentation usando la libreria BabelNet"""
+class WordNetAugmenter:
+    """Classe per data augmentation usando WordNet tramite NLTK"""
 
     def __init__(self):
-        """La configurazione viene letta automaticamente da babelnet_conf.yml"""
-        print("BabelNet API inizializzata correttamente")
+        """Inizializza il modello spaCy e l'embedding model"""
+        print("WordNet Augmenter inizializzato correttamente")
 
-        self.nlp_tool = spacy.load('it_core_news_sm') #Tool per pos embedding e informazioni morfologiche
-        self.emb_model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2') #Embedding per calcolare cosine similarity
+        self.nlp_tool = spacy.load('it_core_news_sm')  # Tool per tokenizzazione
+        self.emb_model = SentenceTransformer('paraphrase-multilingual-mpnet-base-v2')  # Embedding per cosine similarity
         self._emb_cache = {}
-        # Mapping tra POS tag di spaCy  e BabelNet POS
-        self.pos_mapping = {
-            'NOUN': POS.NOUN,
-            'PROPN': POS.NOUN,  # Nome proprio -> NOUN
-            'VERB': POS.VERB,
-            'ADJ': POS.ADJ,
-            'ADV': POS.ADV,
-            'AUX': POS.VERB,  # Verbi ausiliari -> VERB
-        }
 
         # Contatori per validazione a posteriori delle sostituzioni effettuate
         self.stats = {
@@ -35,11 +26,11 @@ class BabelNetAugmenter:
             'candidates_evaluated': 0,  # Candidati valutati per similarity
             'candidates_passing_threshold': 0,  # Candidati sopra threshold
             'pos_errors_in_substitutions': 0,  # Errori POS nelle sostituzioni finali
-            'morphology_errors_in_substitutions': 0,  # Errori morfologici nelle sostituzioni finali
-            'general_errors_in_substitutions': 0  # Errori generici nelle sostituzioni finali
+            'morphology_errors_in_substitutions': 0  # Errori morfologici nelle sostituzioni finali
         }
 
     def embed(self, text):
+        """Crea o recupera l'embedding di un testo dalla cache"""
         if text in self._emb_cache:
             return self._emb_cache[text]
 
@@ -48,18 +39,17 @@ class BabelNetAugmenter:
 
         return emb
 
-    def analyze_text(self, text:str):
+    def analyze_text(self, text: str):
         """
-        Analizza il testo con spaCy e restituisce
-        una lista di dizionari con token, POS tag e informazioni sul genere, numero e tempo verbale.
+        Analizza il testo con spaCy e restituisce una lista di dizionari con token,
+        POS tag e informazioni morfologiche.
 
         Args:
             text: Il testo completo da analizzare
 
         Returns:
-            Lista di dizionari contenenti: 'text', 'pos', 'lemma', 'is_alpha', etc.
+            Lista di dizionari contenenti: 'text', 'lemma', 'pos', 'gender', 'number', etc.
         """
-
         doc = self.nlp_tool(text)
 
         tokens_info = []
@@ -68,7 +58,6 @@ class BabelNetAugmenter:
             tokens_info.append({
                 'text': token.text,
                 'pos': token.pos_,
-                'babel_pos': self.pos_mapping.get(token.pos_, POS.NOUN),
                 'lemma': token.lemma_,
                 'is_alpha': token.is_alpha,
                 'is_punct': token.is_punct,
@@ -89,7 +78,6 @@ class BabelNetAugmenter:
         Usato per validazione a posteriori delle sostituzioni.
 
         Args:
-            original_word: Parola originale
             synonym: Sinonimo scelto
             original_pos: POS tag originale
 
@@ -97,6 +85,9 @@ class BabelNetAugmenter:
             True se POS corretto, False altrimenti
         """
         doc = self.nlp_tool(synonym)
+        if len(doc) == 0:
+            return False
+
         syn_token = doc[0]
 
         # Per verbi ausiliari e verbi normali, consideriamo equivalenti
@@ -109,30 +100,31 @@ class BabelNetAugmenter:
 
         return syn_token.pos_ == original_pos
 
-
-    def check_morph(self, synonym: str, original_morph: Dict[str, Any]) -> bool:
+    def validate_morphology(self, synonym: str, original_morph: Dict[str, Any]) -> bool:
         """
-           Verifica che il sinonimo abbia le stesse caratteristiche morfologiche
-           (genere e numero) della parola originale.
+        Valida che il sinonimo abbia le stesse caratteristiche morfologiche.
+        Usato per validazione a posteriori delle sostituzioni.
 
-           Args:
-               original_word: Parola originale
-               synonym: Sinonimo candidato
-               original_morph: Dizionario con feature morfologiche originali
+        Args:
+            synonym: Sinonimo scelto
+            original_morph: Feature morfologiche originali
 
-           Returns:
-               True se il sinonimo ha le stesse feature morfologiche
+        Returns:
+            True se morfologia corretta, False altrimenti
         """
         doc = self.nlp_tool(synonym)
+        if len(doc) == 0:
+            return False
+
         syn_token = doc[0]
         syn_morph = syn_token.morph.to_dict()
 
-        # Controlla genere (solo per nomi e aggettivi)
+        # Controlla genere
         if original_morph.get('gender') is not None:
             if syn_morph.get('Gender') != original_morph['gender']:
                 return False
 
-        # Controlla numero (singolare/plurale)
+        # Controlla numero
         if original_morph.get('number') is not None:
             if syn_morph.get('Number') != original_morph['number']:
                 return False
@@ -148,18 +140,18 @@ class BabelNetAugmenter:
 
         return True
 
-    def pick_best_syn(self, word: str, synonyms: list, context: str = None, min_sim : float = 0.5):
+    def pick_best_syn(self, word: str, synonyms: list, context: str = None, min_sim: float = 0.5):
         """
-           Sceglie il miglior sinonimo tra una lista di sinonimi in base alla cosine similarity
+        Sceglie il miglior sinonimo tra una lista di sinonimi in base alla cosine similarity
 
-           Args:
-               word: Parola originale
-               synonyms: Lista di sinonimi
-               context: Contesto della parola originale
-               min_sim: valore minimo di cosine similarity per accettare un sinonimo
+        Args:
+            word: Parola originale
+            synonyms: Lista di sinonimi
+            context: Contesto della parola originale
+            min_sim: valore minimo di cosine similarity per accettare un sinonimo
 
-           Returns:
-               Migliore tra i sinonimi con la cosine similarity maggiore di min_sim
+        Returns:
+            Migliore tra i sinonimi con la cosine similarity maggiore di min_sim
         """
         if not synonyms:
             return None
@@ -179,46 +171,43 @@ class BabelNetAugmenter:
 
         # Traccia quanti candidati vengono valutati
         self.stats['candidates_evaluated'] += len(synonyms)
+
         if best_sims >= min_sim:
             self.stats['candidates_passing_threshold'] += 1
             return best
         else:
             return word
 
-    def get_synonyms(self, word: str, lang: Language = Language.IT, target_pos=POS.NOUN) -> List[str]:
+    def get_synonyms(self, word: str) -> List[str]:
         """
-        Ottiene i sinonimi per una parola usando l'API ufficiale BabelNet.
+        Ottiene i sinonimi per una parola usando WordNet tramite NLTK.
 
         Args:
             word: La parola per cui cercare sinonimi
-            lang: La lingua della parola (default: italiano)
-            target_pos: Part-of speech della parola originale
+
         Returns:
             Lista di sinonimi trovati
         """
         try:
-            # Ottieni i synset per la parola
-            synsets = bn.get_synsets(word, from_langs=[lang])
+            # Ottieni tutti i synset per la parola
+            synsets = wn.synsets(word, lang='ita')
 
             if not synsets:
                 return []
 
             synonyms = set()
 
-            for synset in list(synsets):
-                # Ottieni tutti i sense (lessicalizzazioni) del synset
-                for sense in synset.senses(lang):
-                    if synset.pos != target_pos:
-                        continue
-                    # lemma = sense.full_lemma
-                    normalized = sense.normalized_lemma
+            for synset in synsets:
+                # Ottieni tutti i lemmi italiani del synset
+                for lemma in synset.lemmas(lang='ita'):
+                    lemma_name = lemma.name()
 
-                    # Aggiungi solo se diverso dalla parola originale e non contiene caratteri particolari
-                    if normalized and normalized.lower() != word.lower() \
-                            and '_' not in normalized and '(' not in normalized and '/' not in normalized:
+                    # Sostituisci underscore con spazio e normalizza
+                    normalized = lemma_name.replace('_', ' ')
+
+                    # Aggiungi solo se diverso dalla parola originale
+                    if normalized and normalized.lower() != word.lower():
                         synonyms.add(normalized)
-                    else:
-                        continue
 
             return list(synonyms)
 
@@ -226,13 +215,14 @@ class BabelNetAugmenter:
             print(f"Errore nel recupero sinonimi per '{word}': {e}")
             return []
 
-    def replace_with_synonyms(self, text: str, replacement_rate: float = 0.3) -> str:
+    def replace_with_synonyms(self, text: str, replacement_rate: float) -> str:
         """
         Sostituisce alcune parole con sinonimi.
 
         Args:
             text: Il testo da aumentare
             replacement_rate: Rate nel quale cambiare le parole
+
         Returns:
             Testo aumentato con sinonimi
         """
@@ -261,25 +251,16 @@ class BabelNetAugmenter:
             # Pulisci la parola da punteggiatura
             clean_word = word.strip('.,!?;:()"\'').lower()
 
-            if len(clean_word) < 4 or clean_word[0].isupper() or clean_word in skip_words or token_info['is_punct']\
-                    or token_info['is_stop']:
+            if len(clean_word) < 4 or clean_word[0].isupper() or clean_word in skip_words or token_info['is_punct'] or \
+                    token_info['is_stop']:
                 augmented_words.append(word)
                 continue
 
             if random.random() < replacement_rate:
-                target_pos = token_info['babel_pos']
-                synonyms = self.get_synonyms(word=clean_word, target_pos=target_pos)
-                if synonyms:
-                    #Filtra i sinonimi per compatibilità morfologica
-                    valid_synonyms = []
-                    for syn in synonyms:
-                        if self.check_morph(syn, {'gender': token_info['gender'],
-                                                  'number': token_info['number'],
-                                                  'person': token_info['person'],
-                                                  'tense': token_info['tense']}
-                                           ):
-                            valid_synonyms.append(syn)
+                synonyms = self.get_synonyms(clean_word)
 
+                if synonyms:
+                    # Costruisci il contesto
                     if i > 0 and i < len(words) - 1:
                         context = words[i - 1] + " " + words[i] + " " + words[i + 1]
                     elif i > 0:
@@ -289,36 +270,26 @@ class BabelNetAugmenter:
                     else:
                         context = words[i]
 
-                    synonym = self.pick_best_syn(word, valid_synonyms, context)
+                    synonym = self.pick_best_syn(word, synonyms, context)
 
                     if synonym and synonym != word:
-                        if word[0].isupper():
-                            synonym = synonym.capitalize()
-
                         # VALIDAZIONE A POSTERIORI della sostituzione effettuata
                         self.stats['total_substitutions'] += 1
 
                         # Verifica POS della sostituzione finale
                         if not self.validate_pos(synonym, token_info['pos']):
                             self.stats['pos_errors_in_substitutions'] += 1
-                            self.stats['general_errors_in_substitutions'] += 1
-                            flag = True #Flag per capire se ci sono errori in entrambe le validazioni
-                        else:
-                            flag = False
 
                         # Verifica morfologia della sostituzione finale
-                        if not self.check_morph(synonym,
+                        if not self.validate_morphology(synonym,
                                                         {'gender': token_info['gender'],
                                                          'number': token_info['number'],
                                                          'person': token_info['person'],
                                                          'tense': token_info['tense']}):
                             self.stats['morphology_errors_in_substitutions'] += 1
-                            self.stats['general_errors_in_substitutions'] += 1
-                        else:
-                            flag = False
 
-                        if flag:
-                            self.stats['general_errors_in_substitutions'] -= 1
+                        if word[0].isupper():
+                            synonym = synonym.capitalize()
 
                         # Riaggiungi la punteggiatura originale
                         suffix = ''.join([c for c in words[i] if not c.isalnum()])
@@ -347,11 +318,10 @@ class BabelNetAugmenter:
         """
         augmented = element.copy()
 
-
-        print(f"\n  Versione aumentata - ")
+        print(f"\n  Versione aumentata- ")
 
         # Tasso di sostituzione diverso per ogni versione
-        replacement_rate = 0.3
+        replacement_rate = 0.5
 
         # Aumenta il campo 'context'
         if 'context' in augmented and augmented['context']:
@@ -418,14 +388,14 @@ class BabelNetAugmenter:
 
             # Calcola tasso di correttezza
             correct_substitutions = (self.stats['total_substitutions'] -
-                                     self.stats['general_errors_in_substitutions'])
+                                     self.stats['pos_errors_in_substitutions'] -
+                                     self.stats['morphology_errors_in_substitutions'])
             correctness_rate = (correct_substitutions / self.stats['total_substitutions']) * 100
 
             print(f"\n  • Sostituzioni corrette:                    {correct_substitutions}")
             print(f"  • Tasso di correttezza complessivo:         {correctness_rate:.2f}%")
 
         print(f"\n{'=' * 70}\n")
-
 
 def main():
     """Funzione principale per l'augmentation del dataset"""
@@ -438,9 +408,9 @@ def main():
     print(f"Dataset caricato: {len(original_data)} elementi")
 
     # Inizializza l'augmenter
-    print("\nInizializzazione BabelNet API...")
+    print("\nInizializzazione WordNet Augmenter...")
     try:
-        augmenter = BabelNetAugmenter()
+        augmenter = WordNetAugmenter()
     except Exception as e:
         print(e)
         return
@@ -464,16 +434,16 @@ def main():
         augmented_data.append(augmented_element)
         print(f"Versione aumentata completata")
 
-
-    # Stampa statistiche di validazione
     augmenter.print_statistics()
 
     # Salva il dataset aumentato
-    output_file = 'meta_templates_reduced_augmented.json'
-    print(f"Salvataggio del dataset in '{output_file}'...")
+    output_file = 'meta_templates_reduced_augmented_wordnet.json'
+    print(f"\nSalvataggio del dataset in '{output_file}'...")
 
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(augmented_data, f, ensure_ascii=False, indent=2)
+
+    print(f"\nProcesso completato! Dataset salvato con {len(augmented_data)} elementi totali.")
 
 
 if __name__ == "__main__":
