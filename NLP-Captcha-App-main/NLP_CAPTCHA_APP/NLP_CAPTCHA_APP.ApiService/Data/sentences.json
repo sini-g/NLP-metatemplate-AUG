@@ -1,0 +1,322 @@
+[
+  {
+    "task_type": "summarization",
+    "context": "Su una barca nel Mare del Nord, tre uomini stanno importando droga nell'Essex: Mickey Steele, Darren Nicholls e Jack Whomes. All'insaputa degli altri due, Nicholls \u00e8 un informatore della polizia che ha detto a D.I. Stone, un agente di polizia, della droga. Le droghe, tuttavia, raggiungono ancora Essex perch\u00e9 Steele anticipa i problemi e manda via Whomes su una barca con il contrabbando. \nViene rivelato da Nicholls, che \u00e8 il narratore del film, che i tre uomini sono fornitori di uno spacciatore dell'Essex di nome Tony Tucker. Tucker, il suo braccio destro Craig Rolfe e lo psicotico Patrick  \"Pat\" Tate sono al servizio come i tre membri principali dei ragazzi dell'Essex. La banda cresce progressivamente in spessore fino a quando una ragazza finisce in coma e poi muore dopo aver preso una pillola di ecstasy \"pura\". \nEnraged, Tucker e Tate visitano Steele e lo minacciano. Per ripagarli, Steele racconta loro di un lavoro ad Amsterdam, che Nicholls, Tate, Rolfe e Steele completano con successo. Nicholls, tuttavia, \u00e8 devastato dal senso di colpa dopo aver ucciso tre uomini. Nel frattempo, Tate si sente come \"inarrestabile\" e tradisce la sua partner Karen, solo per farsi lasciare da lei per Steele. Inoltre aggredisce brutalmente un impiegato della pizzeria perch\u00e9 il dipendente si rifiuta di fare una pizza su misura per il nuovo partner di Tate, dando alla polizia accuse solide verso un membro per la prima volta. Nonostante ci\u00f2, Stone dice al dipendente di ritirare le accuse perch\u00e9 sa che \u00e8 necessaria una condanna a lungo termine. Tuttavia, per questa decisione \u00e8 sotto il controllo dei suoi superiori.",
+    "task_input": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!",
+    "task_output": "La caduta degli Essex Boys",
+    "input": "<|tasktype|>\nsummarization\n<|context|>\nSu una barca nel Mare del Nord, tre uomini stanno importando droga nell'Essex: Mickey Steele, Darren Nicholls e Jack Whomes. All'insaputa degli altri due, Nicholls \u00e8 un informatore della polizia che ha detto a D.I. Stone, un agente di polizia, della droga. Le droghe, tuttavia, raggiungono ancora Essex perch\u00e9 Steele anticipa i problemi e manda via Whomes su una barca con il contrabbando. \nViene rivelato da Nicholls, che \u00e8 il narratore del film, che i tre uomini sono fornitori di uno spacciatore dell'Essex di nome Tony Tucker. Tucker, il suo braccio destro Craig Rolfe e lo psicotico Patrick  \"Pat\" Tate sono al servizio come i tre membri principali dei ragazzi dell'Essex. La banda cresce progressivamente in spessore fino a quando una ragazza finisce in coma e poi muore dopo aver preso una pillola di ecstasy \"pura\". \nEnraged, Tucker e Tate visitano Steele e lo minacciano. Per ripagarli, Steele racconta loro di un lavoro ad Amsterdam, che Nicholls, Tate, Rolfe e Steele completano con successo. Nicholls, tuttavia, \u00e8 devastato dal senso di colpa dopo aver ucciso tre uomini. Nel frattempo, Tate si sente come \"inarrestabile\" e tradisce la sua partner Karen, solo per farsi lasciare da lei per Steele. Inoltre aggredisce brutalmente un impiegato della pizzeria perch\u00e9 il dipendente si rifiuta di fare una pizza su misura per il nuovo partner di Tate, dando alla polizia accuse solide verso un membro per la prima volta. Nonostante ci\u00f2, Stone dice al dipendente di ritirare le accuse perch\u00e9 sa che \u00e8 necessaria una condanna a lungo termine. Tuttavia, per questa decisione \u00e8 sotto il controllo dei suoi superiori.\n<|task|>",
+    "output": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!\n<|pipe|>\nLa caduta degli Essex Boys",
+    "id": 1,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "summarization",
+    "context": "Ambientato durante la guerra civile americana, la storia si concentra su Charlotte Lovell e sua cugina Delia, il cui giorno del matrimonio \u00e8 interrotto quando il suo ex fidanzato Clem Spender torna dopo un'assenza di due anni. Delia sta per sposare Jim Ralston, e Charlotte conforta Clem, che si arruola nell'esercito dell'Unione e viene successivamente ucciso in battaglia. Poco dopo la sua morte, Charlotte scopre di essere incinta del figlio di Clem e per sfuggire dallo stigma di un figlio illegittimo, viaggia verso ovest per avere il suo beb\u00e8, una figlia che chiama Clementina (o  \"Tina\").\n Dopo la fine della guerra, Charlotte e Tina si trasferiscono a Philadelphia, dove Charlotte apre un orfanotrofio. Delia \u00e8 la madre di due figli, e Charlotte \u00e8 promessa sposa di Joe Ralston, il cognato di suo cugino. Il giorno del suo matrimonio, Charlotte dice a Delia che Tina \u00e8 sua figlia da Clem, e Delia impedisce a Joe di sposare Charlotte dicendogli che lei \u00e8 in cattive condizioni di salute. I cugini diventano estranei, ma quando Jim viene ucciso in un incidente di equitazione, Delia invita Charlotte e Tina a trasferirsi con lei e i suoi figli. Tina, non sapendo che Charlotte \u00e8 la sua madre naturale, assume il ruolo di figlia di Delia e chiama Charlotte sua zia. \nQuindici anni passano, e Tina si fidanza con il ricco Lanning Halsey. Ancora inconsapevole che Charlotte \u00e8 sua madre, inizia a risentirsi di ci\u00f2 che considera un' interferenza nella sua vita e quando Delia si offre formalmente di adottare Tina per darle un nome rispettabile e una posizione prominente nella societ\u00e0, accetta volentieri. Charlotte intende dire a Tina la verit\u00e0 prima del suo matrimonio, ma si trova incapace di farlo.",
+    "task_input": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!",
+    "task_output": "Il grande amore(1939)",
+    "input": "<|tasktype|>\nsummarization\n<|context|>\nAmbientato durante la guerra civile americana, la storia si concentra su Charlotte Lovell e sua cugina Delia, il cui giorno del matrimonio \u00e8 interrotto quando il suo ex fidanzato Clem Spender torna dopo un'assenza di due anni. Delia sta per sposare Jim Ralston, e Charlotte conforta Clem, che si arruola nell'esercito dell'Unione e viene successivamente ucciso in battaglia. Poco dopo la sua morte, Charlotte scopre di essere incinta del figlio di Clem e per sfuggire dallo stigma di un figlio illegittimo, viaggia verso ovest per avere il suo beb\u00e8, una figlia che chiama Clementina (o  \"Tina\"). n Dopo la fine della guerra, Charlotte e Tina si trasferiscono a Philadelphia, dove Charlotte apre un orfanotrofio. Delia \u00e8 la madre di due figli, e Charlotte \u00e8 fpromessa sposa di Joe Ralston, il cognato di suo cugino. Il giorno del suo matrimonio, Charlotte dice a Delia che Tina \u00e8 sua figlia da Clem, e Delia impedisce a Joe di sposare Charlotte dicendogli che lei \u00e8 in cattive condizioni di salute. I cugini diventano estranei, ma quando Jim viene ucciso in un incidente di equitazione, Delia invita Charlotte e Tina a trasferirsi con lei e i suoi figli. Tina, non sapendo che Charlotte \u00e8 la sua madre naturale, assume il ruolo di figlia di Delia e chiama Charlotte sua zia. \nQuindici anni passano, e Tina si fidanza con il ricco Lanning Halsey. Ancora inconsapevole che Charlotte \u00e8 sua madre, inizia a risentirsi di ci\u00f2 che considera un' interferenza nella sua vita e quando Delia si offre formalmente di adottare Tina per darle un nome rispettabile e una posizione prominente nella societ\u00e0, accetta volentieri. Charlotte intende dire a Tina la verit\u00e0 prima del suo matrimonio, ma si trova incapace di farlo.\n<|task|>",
+    "output": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!\n<|pipe|>\nIl grande amore(1939)",
+    "id": 2,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "summarization",
+    "context": "Anthony Field e Jeff Fatt erano membri dei The Cockroaches, un gruppo pop di Sydney noto per il loro  \"materiale R&B good-time\" e diversi singoli registrati da etichette indipendenti durante gli anni '80. Nel 1988, la nipote di Field, figlia del fondatore e membro dei Cockroaches, Paul Field, \u00e8 morta di SIDS e il gruppo si \u00e8 sciolto. Anthony Field si \u00e8 iscritto alla Macquarie University di Sydney per completare la sua laurea in educazione della prima infanzia, e in seguito ha dichiarato che la morte di sua nipote  \"ha portato alla formazione di [The] Wiggles\". Murray Cook, anche lui \"uno studente di et\u00e0 avanzata\", era il chitarrista nella band rock Bang Shang a Lang prima di iscriversi alla Macquarie. Greg Page, che era stato un roadie ha anche cantato con The Cockroaches durante i loro ultimi anni, si era iscritto a Macquarie per studiare l'educazione della prima infanzia su raccomandazione di Field. Field, Cook e Page erano tra i circa 10 uomini in un programma con 200 studenti.\nNel 1991, mentre era ancora uno studente, Field divenne motivato ad utilizzare concetti nel campo dell'educazione della prima infanzia per registrare un album di musica per bambini. L'album era dedicato alla nipote di Field. Una canzone che ha scritto per The Cockroaches,  \"Get Ready to Wiggle\" ha ispirato il nome della band perch\u00e9 pensavano che lo wiggling descrivesse il modo in cui i bambini ballano. Come un progetto universitario, hanno prodotto una cartella con report che spiegavano il valore educativo di ogni canzone dell'album. Avevano bisogno di un tastierista \"per rafforzare il sentore rock'n'roll del progetto\", cos\u00ec Field ha chiesto al suo vecchio compagno di band Fatt per la sua assistenza in quello che pensavano sarebbe stato un progetto temporaneo. \nIl gruppo ha ricevuto aiuto nella composizione da John Field, fratello di Anthony ed ex compagno di band, e da Phillip Wilcher, che lavorava con il programma musicale per la prima infanzia a Macquarie. Dopo aver contribuito al loro primo album, ospitando le prime sessioni di registrazione del gruppo nella sua casa di Sydney e apparendo in un paio dei primi video del gruppo, Wilcher ha lasciato il gruppo ed \u00e8 entrato nella musica classica. Il gruppo ha rielaborato alcuni brani dei Cockroaches...",
+    "task_input": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!",
+    "task_output": "Gli Wiggles",
+    "input": "<|tasktype|>\nsummarization\n<|context|>\nAnthony Field e Jeff Fatt erano membri dei The Cockroaches, un gruppo pop di Sydney noto per il loro  \"materiale R&B good-time\" e diversi singoli registrati da etichette indipendenti durante gli anni '80. Nel 1988, la nipote di Field, figlia del fondatore e membro dei Cockroaches, Paul Field, \u00e8 morta di SIDS e il gruppo si \u00e8 sciolto. Anthony Field si \u00e8 iscritto alla Macquarie University di Sydney per completare la sua laurea in educazione della prima infanzia, e in seguito ha dichiarato che la morte di sua nipote  \"ha portato alla formazione di [The] Wiggles\". Murray Cook, anche lui \"uno studente di et\u00e0 avanzata\", era il chitarrista nella band rock Bang Shang a Lang prima di iscriversi alla Macquarie. Greg Page, che era stato un roadie ha anche cantato con The Cockroaches durante i loro ultimi anni, si era iscritto a Macquarie per studiare l'educazione della prima infanzia su raccomandazione di Field. Field, Cook e Page erano tra i circa 10 uomini in un programma con 200 studenti.\nNel 1991, mentre era ancora uno studente, Field divenne motivato ad utilizzare concetti nel campo dell'educazione della prima infanzia per registrare un album di musica per bambini. L'album era dedicato alla nipote di Field. Una canzone che ha scritto per The Cockroaches,  \"Get Ready to Wiggle\" ha ispirato il nome della band perch\u00e9 pensavano che lo wiggling descrivesse il modo in cui i bambini ballano. Come un progetto universitario, hanno prodotto una cartella con report che spiegavano il valore educativo di ogni canzone dell'album. Avevano bisogno di un tastierista \"per rafforzare il sentore rock'n'roll del progetto\", cos\u00ec Field ha chiesto al suo vecchio compagno di band Fatt per la sua assistenza in quello che pensavano sarebbe stato un progetto temporaneo. \nIl gruppo ha ricevuto aiuto nella composizione da John Field, fratello di Anthony ed ex compagno di band, e da Phillip Wilcher, che lavorava con il programma musicale per la prima infanzia a Macquarie. Dopo aver contribuito al loro primo album, ospitando le prime sessioni di registrazione del gruppo nella sua casa di Sydney e apparendo in un paio dei primi video del gruppo, Wilcher ha lasciato il gruppo ed \u00e8 entrato nella musica classica. Il gruppo ha rielaborato alcuni brani dei Cockroaches...\n<|task|>",
+    "output": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!\n<|pipe|>\nGli Wiggles",
+    "id": 3,
+    "control_status": "None"
+  },
+  {
+    "task_type": "summarization",
+    "context": "Lennon ha incontrato Cynthia Powell (1939-2015) nel 1957, quando erano compagni di studio al Liverpool College of Art. Sebbene Powell fosse intimidita dall'atteggiamento e dall'aspetto di Lennon, ha sentito che era ossessionato dall'attrice francese Brigitte Bardot, quindi si \u00e8 tinta i capelli di biondo. Lennon le chiese di uscire, ma quando lei disse che era fidanzata, lui url\u00f2:  \"Non ti ho chiesto di sposarmi, vero?\" Spesso lo accompagnava ai concerti dei Quarrymen e andava ad Amburgo con la ragazza di McCartney per fargli visita. Lennon era geloso per natura e alla fine divenne possessivo, spesso terrorizzando Powell con la sua rabbia e violenza fisica. Lennon ha detto in seguito che prima di incontrare Ono, non aveva mai messo in dubbio il suo atteggiamento sciovinista nei confronti delle donne. Ha detto che la canzone dei Beatles \"Getting Better\" raccontava la sua storia,  \"Ero crudele con la mia donna, e fisicamente - qualsiasi donna. Ero un violento. Non potevo esprimermi e ho colpito. Ho combattuto uomini e ho colpito donne. \u00c8 per questo che sono sempre sulla pace.\"\nRicordando la sua reazione di luglio 1962 quando ha saputo che Cynthia era incinta, Lennon ha detto: \"C'\u00e8 solo una cosa per questo Cyn. Dovremo sposarci.\" La coppia si \u00e8 sposata il 23 agosto presso l'ufficio di registrazione del Mount Pleasant a Liverpool, con Brian Epstein che funge da testimone. Il suo matrimonio \u00e8 iniziato proprio quando la Beatlemania stava decollando in tutto il Regno Unito. Si esib\u00ec la sera del suo matrimonio e avrebbe continuato a farlo quasi ogni giorno da allora in poi. Epstein temeva che i fan sarebbero stati alienati dall'idea di un membro dei Beatles sposato, e ha chiesto ai Lennon di mantenere il loro matrimonio segreto. Julian \u00e8 nato l'8 aprile 1963; Lennon era in tour all'epoca e non ha visto il figlio neonato fino a tre giorni dopo.\nCynthia attribu\u00ec l'inizio del divorzio all'uso di LSD da parte di Lennon, e sent\u00ec che lentamente perse interesse per lei a causa dell'uso della droga. Quando il gruppo viaggi\u00f2 in treno a Bangor, nel Galles, nel 1967 per il seminario di meditazione trascendentale del Maharishi Yogi, un poliziotto non la riconobbe e le imped\u00ec di imbarcarsi. Lei...",
+    "task_input": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!",
+    "task_output": "John Lennon",
+    "input": "<|tasktype|>\nsummarization\n<|context|>\nLennon ha incontrato Cynthia Powell (1939-2015) nel 1957, quando erano compagni di studio al Liverpool College of Art. Sebbene Powell fosse intimidita dall'atteggiamento e dall'aspetto di Lennon, ha sentito che era ossessionato dall'attrice francese Brigitte Bardot, quindi si \u00e8 tinta i capelli di biondo. Lennon le chiese di uscire, ma quando lei disse che era fidanzata, lui url\u00f2:  \"Non ti ho chiesto di sposarmi, vero?\" Spesso lo accompagnava ai concerti dei Quarrymen e andava ad Amburgo con la ragazza di McCartney per fargli visita. Lennon era geloso per natura e alla fine divenne possessivo, spesso terrorizzando Powell con la sua rabbia e violenza fisica. Lennon ha detto in seguito che prima di incontrare Ono, non aveva mai messo in dubbio il suo atteggiamento sciovinista nei confronti delle donne. Ha detto che la canzone dei Beatles \"Getting Better\" raccontava la sua storia,  \"Ero crudele con la mia donna, e fisicamente - qualsiasi donna. Ero un violento. Non potevo esprimermi e ho colpito. Ho combattuto uomini e ho colpito donne. \u00c8 per questo che sono sempre sulla pace.\"\nRicordando la sua reazione di luglio 1962 quando ha saputo che Cynthia era incinta, Lennon ha detto: \"C'\u00e8 solo una cosa per questo Cyn. Dovremo sposarci.\" La coppia si \u00e8 sposata il 23 agosto presso l'ufficio di registrazione del Mount Pleasant a Liverpool, con Brian Epstein che funge da testimone. Il suo matrimonio \u00e8 iniziato proprio quando la Beatlemania stava decollando in tutto il Regno Unito. Si esib\u00ec la sera del suo matrimonio e avrebbe continuato a farlo quasi ogni giorno da allora in poi. Epstein temeva che i fan sarebbero stati alienati dall'idea di un membro dei Beatles sposato, e ha chiesto ai Lennon di mantenere il loro matrimonio segreto. Julian \u00e8 nato l'8 aprile 1963; Lennon era in tour all'epoca e non ha visto il figlio neonato fino a tre giorni dopo.\nCynthia attribu\u00ec l'inizio del divorzio all'uso di LSD da parte di Lennon, e sent\u00ec che lentamente perse interesse per lei a causa dell'uso della droga. Quando il gruppo viaggi\u00f2 in treno a Bangor, nel Galles, nel 1967 per il seminario di meditazione trascendentale del Maharishi Yogi, un poliziotto non la riconobbe e le imped\u00ec di imbarcarsi. Lei...\n<|task|>",
+    "output": "Dato il seguente contesto:\n\n{{context}}\n\nSupponi un titolo valido per esso!\n<|pipe|>\nJohn Lennon",
+    "id": 4,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "sentiment",
+    "context": "Rispetto ad altri video di allenamento questi sono solo fallimentari. C'\u00e8 una cattiva direzione data durante l'allenamento rendendo difficile concentrarsi sui movimenti perch\u00e9 devi sempre stare a guardare lo schermo per vedere cosa, quando e come fare la prossima mossa. Inoltre, personalmente ho bisogno di un allenamento che mi tiri su e non mettermi a dormire. Questi non valgono il tempo o i soldi per me.",
+    "task_input": "Titolo: Cattive istruzioni!\nRecensione prodotto: {{context}}\nDiresti che questa recensione raffigura il prodotto in una luce lusinghiera o non lusinghiera?",
+    "task_output": "non lusinghiera",
+    "input": "<|tasktype|>\nsentiment\n<|context|>\nRispetto ad altri video di allenamento questi sono solo fallimentari. C'\u00e8 una cattiva direzione data durante l'allenamento rendendo difficile concentrarsi sui movimenti perch\u00e9 devi sempre stare a guardare lo schermo per vedere cosa, quando e come fare la prossima mossa. Inoltre, personalmente ho bisogno di un allenamento che mi tiri su e non mettermi a dormire. Questi non valgono il tempo o i soldi per me.\n<|task|>",
+    "output": "Titolo: Cattive istruzioni!\nRecensione prodotto: {{context}}\nDiresti che questa recensione raffigura il prodotto in una luce lusinghiera o non lusinghiera?\n<|pipe|>\nnon lusinghiera",
+    "id": 5,
+    "control_status": "None"
+  },
+  {
+    "task_type": "sentiment",
+    "context": "Questa altalena \u00e8 l'altalena pi\u00f9 affascinante! Ho un bambino di 3 mesi e un bambino di 3 anni, e questa altalena mi permette di trascorrere del tempo di qualit\u00e0 con il mio bambino di 3 anni. La mia piccola bambina ama questo swing cos\u00ec tanto - lei ama lo spettacolo di luce e il cellulare. Sorride e ridacchia al cellulare, e calcia i piedi alla musica. La aiuta a dormire la notte. Prima di questa altalena, voleva solo che la tenessi - non potevo metterla gi\u00f9 senza farla piangere. Lei ha un brutto reflusso acido  e ha dovuto trascorrere tre settimane e mezzo nell' ospedale dei bambini, e ha quasi affrontato un intervento chirurgico per l'incapacit\u00e0 di svilupparsi, cos\u00ec toccava a me tenerla tutto il tempo, perch\u00e9 piangeva molto dal dolore. Ha ancora davvero brutte giornate con il reflusso. Ma dal primo giorno di acquisto di questa altalena a 2 mesi di et\u00e0, la ha amata. Ora posso passare un po' pi\u00f9 di tempo con la mia bambina di 3 anni che si \u00e8 sentita molto esclusa. Grazie, Fisher-Price, per aver aiutato ENTRAMBE le mie bellissime bambine.",
+    "task_input": "Stai considerando se comprare un prodotto. Vedi questa recensione. La seguente recensione diminuirebbe o aumenterebbe le probabilit\u00e0 di acquistare il prodotto?\nTitolo recensione: Un salva vita!!!!\nRecensione prodotto: {{context}}",
+    "task_output": "aumenterebbe",
+    "input": "<|tasktype|>\nsentiment\n<|context|>\nQuesta altalena \u00e8 l'altalena pi\u00f9 affascinante! Ho un bambino di 3 mesi e un bambino di 3 anni, e questa altalena mi permette di trascorrere del tempo di qualit\u00e0 con il mio bambino di 3 anni. La mia piccola bambina ama questo swing cos\u00ec tanto - lei ama lo spettacolo di luce e il cellulare. Sorride e ridacchia al cellulare, e calcia i piedi alla musica. La aiuta a dormire la notte. Prima di questa altalena, voleva solo che la tenessi - non potevo metterla gi\u00f9 senza farla piangere. Lei ha un brutto reflusso acido  e ha dovuto trascorrere tre settimane e mezzo nell' ospedale dei bambini, e ha quasi affrontato un intervento chirurgico per l'incapacit\u00e0 di svilupparsi, cos\u00ec toccava a me tenerla tutto il tempo, perch\u00e9 piangeva molto dal dolore. Ha ancora davvero brutte giornate con il reflusso. Ma dal primo giorno di acquisto di questa altalena a 2 mesi di et\u00e0, la ha amata. Ora posso passare un po' pi\u00f9 di tempo con la mia bambina di 3 anni che si \u00e8 sentita molto esclusa. Grazie, Fisher-Price, per aver aiutato ENTRAMBE le mie bellissime bambine.\n<|task|>",
+    "output": "Stai considerando se comprare un prodotto. Vedi questa recensione. La seguente recensione diminuirebbe o aumenterebbe le probabilit\u00e0 di acquistare il prodotto?\nTitolo recensione: Un salva vita!!!!\nRecensione prodotto: {{context}}\n<|pipe|>\naumenterebbe",
+    "id": 6,
+    "control_status": "None"
+  },
+  {
+    "task_type": "sentiment",
+    "context": "Questo non \u00e8 un archivio di Sherlock Holmes. Ha alcuni film di Sherlock in questa \"collezione\", ma il titolo \u00e8 molto fuorviante. Una volta che si ottiene il pacchetto, si vede effettivamente ci\u00f2 che \u00e8 contenuto in esso. Un film \u00e8 un talkie e un muto sotto titoli diversi. Ho smesso di guardare dopo i primi sul primo disco. Ho letto gli altri titoli e sapevo che era una fuorviante \"collezione\".",
+    "task_input": "Titolo: non sherlock\nRecensione: {{context}}\nQuesta recensione \u00e8 positiva o negativa?",
+    "task_output": "Negativa",
+    "input": "<|tasktype|>\nsentiment\n<|context|>\nQuesto non \u00e8 un archivio di Sherlock Holmes. Ha alcuni film di Sherlock in questa \"collezione\", ma il titolo \u00e8 molto fuorviante. Una volta che si ottiene il pacchetto, si vede effettivamente ci\u00f2 che \u00e8 contenuto in esso. Un film \u00e8 un talkie e un muto sotto titoli diversi. Ho smesso di guardare dopo i primi sul primo disco. Ho letto gli altri titoli e sapevo che era una fuorviante \"collezione\".\n<|task|>",
+    "output": "Titolo: non sherlock\nRecensione: {{context}}\nQuesta recensione \u00e8 positiva o negativa?\n<|pipe|>\nNegativa",
+    "id": 7,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "sentiment",
+    "context": "Ho acquistato una coperta elettrica top di gamma della Sunbeam a gennaio e ha funzionato (le poche volte che \u00e8 stata utilizzata) fino a marzo, quando ha sostanzialmente smesso di riscaldarsi. Non c'era nessun codice di errore qualcos'altro - solo che non riscaldava pi\u00f9 . Fortunatamente, il negozio me lo ha rimborsato. Ho cercato un'altra marca e non riuscivo a trovarne una, quindi ho comprato un' altra della Sunbeam che \u00e8 durata meno di 2 settimane. Ora ha esattamente lo stesso problema della prima. Questo \u00e8 un prodotto inutile e non riesco a credere che il produttore countinui a vendere qualcosa di cos\u00ec disfunzionale.",
+    "task_input": "Ecco una recensione lasciata da un cliente su un prodotto. Diresti che il cliente \u00e8 soddisfatto o insoddisfatto?\nTitolo: Prodotto Inutile\nRecensione: {{context}}",
+    "task_output": "insoddisfatto",
+    "input": "<|tasktype|>\nsentiment\n<|context|>\nHo acquistato una coperta elettrica top di gamma della Sunbeam a gennaio e ha funzionato (le poche volte che \u00e8 stata utilizzata) fino a marzo, quando ha sostanzialmente smesso di riscaldarsi. Non c'era nessun codice di errore qualcos'altro - solo che non riscaldava pi\u00f9 . Fortunatamente, il negozio me lo ha rimborsato. Ho cercato un'altra marca e non riuscivo a trovarne una, quindi ho comprato un' altra della Sunbeam che \u00e8 durata meno di 2 settimane. Ora ha esattamente lo stesso problema della prima. Questo \u00e8 un prodotto inutile e non riesco a credere che il produttore countinui a vendere qualcosa di cos\u00ec disfunzionale.\n<|task|>",
+    "output": "Ecco una recensione lasciata da un cliente su un prodotto. Diresti che il cliente \u00e8 soddisfatto o insoddisfatto?\nTitolo: Prodotto Inutile\nRecensione: {{context}}\n<|pipe|>\ninsoddisfatto",
+    "id": 8,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "multiple-choice question answering",
+    "context": "Dio ha risposto alle mie preghiere! Sapevo che avremmo lavorato per il nostro anniversario, ma ho pregato se per favore potrebbe renderlo speciale per me? Sono un tale idiota nel festeggiare eventi .",
+    "task_input": "{{context}}\nPerch\u00e9 il narratore ha pregato Dio per evitare di lavorare?\nScegli la migliore risposta dalle seguenti opzioni:\nA. Il narratore ama lavorare pi\u00f9 che festeggiare eventi personali .\nB. Il narratore non ha nessun desiderio di festeggiare l'anniversario .\nC. Nessuna delle altre scelte .\nD. Il narratore ama veramente il suo lavoro ed \u00e8 appasionato di ci\u00f2 .",
+    "task_output": "C",
+    "input": "<|tasktype|>\nmultiple-choice question answering\n<|context|>\nDio ha risposto alle mie preghiere! Sapevo che avremmo lavorato per il nostro anniversario, ma ho pregato se per favore potrebbe renderlo speciale per me? Sono un tale idiota nel festeggiare eventi .\n<|task|>",
+    "output": "{{context}}\nPerch\u00e9 il narratore ha pregato Dio per evitare di lavorare?\nScegli la migliore risposta dalle seguenti opzioni:\nA. Il narratore ama lavorare pi\u00f9 che festeggiare eventi personali .\nB. Il narratore non ha nessun desiderio di festeggiare l'anniversario .\nC. Nessuna delle altre scelte .\nD. Il narratore ama veramente il suo lavoro ed \u00e8 appasionato di ci\u00f2 .\n<|pipe|>\nC",
+    "id": 9,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "multiple-choice question answering",
+    "context": "Tocadisco suoner\u00e0 l\u00ec il prossimo venerd\u00ec e sono solo 5 dollari per entrare, quindi sar\u00f2 sicuramente di nuovo l\u00ec la prossima settimana . Sono davvero innamorato di questa citt\u00e0 . Passeggiare in giro stasera \u00e8 stato divertente e mi sento come di essere pi\u00f9 afferrato su dove le cose sono . Sono stupito da quanto lenitive le leggi dell'erba sono qui a San Fran .",
+    "task_input": "{{context}}\nPerch\u00e9 ama cos\u00ec tanto San Francisco?\nScegli la risposta migliore dalle seguenti opzioni:\n- E' molto piu calda della citt\u00e0 vecchia\n- Nessuna delle altre scelte .\n- Molti dei suoi hobbies sono economici o gratis\n- E' libero di piantare erba",
+    "task_output": "Molti dei suoi hobbies sono economici o gratis",
+    "input": "<|tasktype|>\nmultiple-choice question answering\n<|context|>\nTocadisco suoner\u00e0 l\u00ec il prossimo venerd\u00ec e sono solo 5 dollari per entrare, quindi sar\u00f2 sicuramente di nuovo l\u00ec la prossima settimana . Sono davvero innamorato di questa citt\u00e0 . Passeggiare in giro stasera \u00e8 stato divertente e mi sento come di essere pi\u00f9 afferrato su dove le cose sono . Sono stupito da quanto lenitive le leggi dell'erba sono qui a San Fran ..\n<|task|>",
+    "output": "{{context}}\nPerch\u00e9 ama cos\u00ec tanto San Francisco?\nScegli la risposta migliore dalle seguenti opzioni:\n- E' molto piu calda della citt\u00e0 vecchia\n- Nessuna delle altre scelte .\n- Molti dei suoi hobbies sono economici o gratis\n- E' libero di piantare erba\n<|pipe|>\n Molti dei suoi hobbies sono economici o gratis",
+    "id": 10,
+    "control_status": "None"
+  },
+  {
+    "task_type": "multiple-choice question answering",
+    "context": "Visto che ero a letto appena dopo le 6 del mattino e dovevo alzarmi alle 12 per prepararmi , era abbastanza comprensibile perch\u00e9 non fossi del tutto fiero di me stesso mentre andavo a letto . Stranamente , per\u00f2 , sono riuscito ad alzarmi in tempo e persino a farmi la doccia e tutto . Non ero del tutto in grado di digerire la colazione , per\u00f2 , cos\u00ec ho finito per avere un paio di Pepsis che probabilmente non era la migliore idea al mondo . Mentre mi dirigevo verso casa di Tina , mi sono ritrovato a barcollare un po' troppo per i miei gusti , cos\u00ec ho finito per dover davvero tirarmi su per apparire un po' normale e decente quando sono arrivato .",
+    "task_input": "{{context}}\nQuale potrebbe essere una ragione plausibile per cui stavo barcollando mentre andavo a casa di Tina ?\nScegli la risposta migliore dalle seguenti opzioni:\n- Ho dormito solo qualche ora .\n- Ho bevuto troppa Pepsi .\n- Non ho digerito la colazione .\n- Camminavo come se ero troppo orgoglioso di me stesso .",
+    "task_output": "Ho dormito solo qualche ora .",
+    "input": "<|tasktype|>\nmultiple-choice question answering\n<|context|>\nVisto che ero a letto appena dopo le 6 del mattino e dovevo alzarmi alle 12 per prepararmi , era abbastanza comprensibile perch\u00e9 non fossi del tutto fiero di me stesso mentre andavo a letto . Stranamente , per\u00f2 , sono riuscito ad alzarmi in tempo e persino a farmi la doccia e tutto . Non ero del tutto in grado di digerire la colazione , per\u00f2 , cos\u00ec ho finito per avere un paio di Pepsis che probabilmente non era la migliore idea al mondo . Mentre mi dirigevo verso casa di Tina , mi sono ritrovato a barcollare un po' troppo per i miei gusti , cos\u00ec ho finito per dover davvero tirarmi su per apparire un po' normale e decente quando sono arrivato .\n<|task|>",
+    "output": "{{context}}\n{{context}}\nQuale potrebbe essere una ragione plausibile per cui stavo barcollando mentre andavo a casa di Tina ?\nScegli la risposta migliore dalle seguenti opzioni:\n- Ho dormito solo qualche ora .\n- Ho bevuto troppa Pepsi .\n- Non ho digerito la colazione .\n- Camminavo come se ero troppo orgoglioso di me stesso .\n<|pipe|>\nHo dormito solo qualche ora .",
+    "id": 11,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "multiple-choice question answering",
+    "context": "Speed II 9/10 Monsoonz 10/10 Entrambi gli aquiloni producono una quantit\u00e0 colossale di sollevamento. Mettiti in piedi sulla spiaggia e tira gi\u00f9 la barra ... e vai su . La Monsoonz era il mio preferito qui di sicuro ... tirare giu la barra e andare su ... ooohhh mamma! ! ... \u00e8 stato amore al primo volo ... Credo che questo \u00e8 il motivo per cui vanno controvento cos\u00ec bene .",
+    "task_input": "{{context}}\nChe tipo di prodotto sto recensendo ?\nA. Un deltaplano\nB. Una tavola da surf\nC. Nessuna delle altre scelte .\nD. Un aeroplano",
+    "task_output": "A",
+    "input": "<|tasktype|>\nmultiple-choice question answering\n<|context|>\nSpeed II 9/10 Monsoonz 10/10 Entrambi gli aquiloni producono una quantit\u00e0 colossale di sollevamento. Mettiti in piedi sulla spiaggia e tira gi\u00f9 la barra ... e vai su . La Monsoonz era il mio preferito qui di sicuro ... tirare giu la barra e andare su ... ooohhh mamma! ! ... \u00e8 stato amore al primo volo ... Credo che questo \u00e8 il motivo per cui vanno controvento cos\u00ec bene .\n<|task|>",
+    "output": "{{context}}\nChe tipo di prodotto sto recensendo ?\nA. Un deltaplano\nB. Una tavola da surf\nC. Nessuna delle altre scelte .\nD. Un aeroplano\n<|pipe|>\nA",
+    "id": 12,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "extractive question answering",
+    "context": "La guerra del Pacifico vide le potenze alleate scontrarsi contro l'Impero del Giappone, quest'ultimo brevemente aiutato dalla Thailandia e in misura molto minore dai suoi alleati dell'Asse, Germania e Italia. La guerra culmin\u00f2 con i bombardamenti atomici di Hiroshima e Nagasaki, e altri grandi attacchi aerei da parte delle forze aeree dell'esercito degli Stati Uniti, accompagnati dall'invasione sovietica della Manciuria l'8 agosto 1945, che ha portato all'annuncio giapponese riguardo l'intenzione di arrendersi il 15 agosto 1945. La resa formale e ufficiale del Giappone avvenne a bordo della corazzata USS Missouri nella baia di Tokyo il 2 settembre 1945. In seguito alla sua sconfitta, l'imperatore shintoista del Giappone si \u00e8 dimesso come leader divino attraverso la direttiva shintoista, perch\u00e9 le potenze alleate credevano che questa fosse la principale causa politica dell'aggressione militare giapponese e il processo di decostruzione ha avuto luogo presto per installare un nuova costituzione democratica al pubblico giapponese come l'attuale Costituzione del Giappone.",
+    "task_input": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassaggio: {{context}}\n\nDomanda: Dove \u00e8 avvenuta la resa del Giappone?",
+    "task_output": "a bordo della corazzara USS Missouri nella baia di Tokyo",
+    "input": "<|tasktype|>\nextractive question answering\n<|context|>\nLa guerra del Pacifico vide le potenze alleate scontrarsi contro l'Impero del Giappone, quest'ultimo brevemente aiutato dalla Thailandia e in misura molto minore dai suoi alleati dell'Asse, Germania e Italia. La guerra culmin\u00f2 con i bombardamenti atomici di Hiroshima e Nagasaki, e altri grandi attacchi aerei da parte delle forze aeree dell'esercito degli Stati Uniti, accompagnati dall'invasione sovietica della Manciuria l'8 agosto 1945, che ha portato all'annuncio giapponese riguardo l'intenzione di arrendersi il 15 agosto 1945. La resa formale e ufficiale del Giappone avvenne a bordo della corazzata USS Missouri nella baia di Tokyo il 2 settembre 1945. In seguito alla sua sconfitta, l'imperatore shintoista del Giappone si \u00e8 dimesso come leader divino attraverso la direttiva shintoista, perch\u00e9 le potenze alleate credevano che questa fosse la principale causa politica dell'aggressione militare giapponese e il processo di decostruzione ha avuto luogo presto per installare un nuova costituzione democratica al pubblico giapponese come l'attuale Costituzione del Giappone.\n<|task|>",
+    "output": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassaggio: {{context}}\n\nDomanda: Dove \u00e8 avvenuta la resa del Giappone??\n<|pipe|>\na bordo della corazzara USS Missouri nella baia di Tokyo",
+    "id": 13,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "extractive question answering",
+    "context": "L'assioma di fondazione ha stabilito che ogni insieme pu\u00f2 essere costruito dal basso verso l'alto in una successione ordinata di passi per mezzo dei principi di Zermelo e Fraenkel, in modo tale che se un insieme appartiene ad un altro allora il primo deve necessariamente venire prima del secondo nella successione, quindi escludendo la possibilit\u00e0 di un insieme appartenente a s\u00e9. Per dimostrare che l'aggiunta di questo nuovo assioma agli altri non produceva contraddizioni, von Neumann ha introdotto un metodo di dimostrazione, chiamato il metodo dei modelli interni, che in seguito \u00e8 diventato uno strumento essenziale nella teoria degli insiemi.",
+    "task_input": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassagio: {{context}}\n\nDomanda:Qual'\u00e8 il metodo per dimostrare che non si sono create contraddizioni aggiungendo l'assioma di fondazione?",
+    "task_output": "metodo dei modelli interni",
+    "input": "<|tasktype|>\nextractive question answering\n<|context|>\nL'assioma di fondazione ha stabilito che ogni insieme pu\u00f2 essere costruito dal basso verso l'alto in una successione ordinata di passi per mezzo dei principi di Zermelo e Fraenkel, in modo tale che se un insieme appartiene ad un altro allora il primo deve necessariamente venire prima del secondo nella successione, quindi escludendo la possibilit\u00e0 di un insieme appartenente a s\u00e9. Per dimostrare che l'aggiunta di questo nuovo assioma agli altri non produceva contraddizioni, von Neumann ha introdotto un metodo di dimostrazione, chiamato il metodo dei modelli interni, che in seguito \u00e8 diventato uno strumento essenziale nella teoria degli insiemi.\n<|task|>",
+    "output": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassagio: {{context}}\n\nDomanda:Qual'\u00e8 il metodo per dimostrare che non si sono create contraddizioni aggiungendo l'assioma di fondazione?\n<|pipe|>\nmetodo dei modelli interni",
+    "id": 14,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "extractive question answering",
+    "context": "I grandi schemi scultorei esterni delle chiese del primo gotico lasciarono il posto a pi\u00f9 sculture all'interno dell'edificio, poich\u00e9 le tombe divennero pi\u00f9 elaborate e altre caratteristiche come i pulpiti erano talvolta sontuosamente scolpite, come nel Pulpito di Giovanni Pisano in Sant'Andrea. Pale d'altare in rilievo dipinte o scolpite in legno sono diventati comuni, soprattutto come chiese creato molte cappelle laterali. Le prime pitture fiamminghe di artisti quali Jan van Eyck (m. 1441) e Rogier van de r Weyden (m. 1464) rivaleggiavano con quelle italiane, cos\u00ec come i manoscritti illuminati del nord, che nel XV secolo cominciarono ad essere raccolti su larga scala dalle \u00e9lite secolari, che commissionarono anche libri secolari, in particolare storie. Da circa 1450 libri stampati rapidamente divenne popolare, anche se ancora costoso. Ci furono circa 30.000 diverse edizioni di incunaboli, o opere stampate prima del 1500, tempo in cui i manoscritti illuminati erano commissionati solo dalla regalit\u00e0 e pochi altri. Le incisioni su legno molto piccole, quasi tutte religiose, erano accessibili anche ai contadini in alcune parti dell'Europa settentrionale a partire dalla met\u00e0 del XV secolo. Le incisioni pi\u00f9 costose hanno fornito un mercato pi\u00f9 ricco con una variet\u00e0 di immagini.",
+    "task_input": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassaggio: {{context}}\n\nDomanda: Quando mor\u00ec Rogier van der Weyden?",
+    "task_output": "1464",
+    "input": "<|tasktype|>\nextractive question answering\n<|context|>\nI grandi schemi scultorei esterni delle chiese del primo gotico lasciarono il posto a pi\u00f9 sculture all'interno dell'edificio, poich\u00e9 le tombe divennero pi\u00f9 elaborate e altre caratteristiche come i pulpiti erano talvolta sontuosamente scolpite, come nel Pulpito di Giovanni Pisano in Sant'Andrea. Pale d'altare in rilievo dipinte o scolpite in legno sono diventati comuni, soprattutto come chiese creato molte cappelle laterali. Le prime pitture fiamminghe di artisti quali Jan van Eyck (m. 1441) e Rogier van de r Weyden (m. 1464) rivaleggiavano con quelle italiane, cos\u00ec come i manoscritti illuminati del nord, che nel XV secolo cominciarono ad essere raccolti su larga scala dalle \u00e9lite secolari, che commissionarono anche libri secolari, in particolare storie. Da circa 1450 libri stampati rapidamente divenne popolare, anche se ancora costoso. Ci furono circa 30.000 diverse edizioni di incunaboli, o opere stampate prima del 1500, tempo in cui i manoscritti illuminati erano commissionati solo dalla regalit\u00e0 e pochi altri. Le incisioni su legno molto piccole, quasi tutte religiose, erano accessibili anche ai contadini in alcune parti dell'Europa settentrionale a partire dalla met\u00e0 del XV secolo. Le incisioni pi\u00f9 costose hanno fornito un mercato pi\u00f9 ricco con una variet\u00e0 di immagini.\n<|task|>",
+    "output": "Fai riferimento al passaggio sottostante e rispondi alla seguente domanda:\n\nPassaggio: {{context}}\n\nDomanda: Quando mor\u00ec Rogier van der Weyden?\n<|pipe|>\n1464",
+    "id": 15,
+    "control_status": "None"
+  },
+  {
+    "task_type": "extractive question answering",
+    "context": "\u00c8 interessante notare che la ricerca ha rivelato che chiedere agli individui di immaginare ripetutamente azioni che non hanno mai eseguito o eventi che non hanno mai vissuto potrebbe portare a falsi ricordi. Per esempio, Goff e Roediger (1998) hanno chiesto ai partecipanti di immaginare di avere eseguito un atto (ad esempio, rompere uno stuzzicadenti) e poi gli ha chiesto se avevano fatto una cosa del genere. I risultati hanno rivelato che i partecipanti che hanno ripetutamente immaginato di eseguire un tale atto erano pi\u00f9 propensi a pensare di aver effettivamente eseguito quell'atto durante la prima sessione dell'esperimento. Allo stesso modo, Garry e i suoi colleghi (1996) hanno chiesto agli studenti universitari di riferire quanto fossero certi di aver vissuto una serie di eventi da bambini (ad esempio, rompere un vetro con la mano) e poi due settimane dopo hanno chiesto loro di immaginare quattro di questi eventi. I ricercatori hanno scoperto che un quarto degli studenti a cui hanno chiesto di immaginare i quattro eventi ha riferito di aver effettivamente vissuto tali eventi da bambini. Cio\u00e8, quando \u00e8 chiesto di immaginare gli eventi erano pi\u00f9 sicuri di avere vissuto gli eventi.",
+    "task_input": "{{context}}\n\nQ: Cosa pu\u00f2 causare a una persona di avere ricoldi falsi?\n\nFacendo riferiferimento al passaggio riportato di sopra, la risposta corretta alla domanda data \u00e8",
+    "task_output": "immaginare ripetutamente azioni che non hanno mai fatto o eventi di cui non hanno mai avuto esperienza",
+    "input": "<|tasktype|>\nextractive question answering\n<|context|>\n\u00c8 interessante notare che la ricerca ha rivelato che chiedere agli individui di immaginare ripetutamente azioni che non hanno mai eseguito o eventi che non hanno mai vissuto potrebbe portare a falsi ricordi. Per esempio, Goff e Roediger (1998) hanno chiesto ai partecipanti di immaginare di avere eseguito un atto (ad esempio, rompere uno stuzzicadenti) e poi gli ha chiesto se avevano fatto una cosa del genere. I risultati hanno rivelato che i partecipanti che hanno ripetutamente immaginato di eseguire un tale atto erano pi\u00f9 propensi a pensare di aver effettivamente eseguito quell'atto durante la prima sessione dell'esperimento. Allo stesso modo, Garry e i suoi colleghi (1996) hanno chiesto agli studenti universitari di riferire quanto fossero certi di aver vissuto una serie di eventi da bambini (ad esempio, rompere un vetro con la mano) e poi due settimane dopo hanno chiesto loro di immaginare quattro di questi eventi. I ricercatori hanno scoperto che un quarto degli studenti a cui hanno chiesto di immaginare i quattro eventi ha riferito di aver effettivamente vissuto tali eventi da bambini. Cio\u00e8, quando \u00e8 chiesto di immaginare gli eventi erano pi\u00f9 sicuri di avere vissuto gli eventi.\n<|task|>",
+    "output": "{{context}}\n\nQ: Cosa pu\u00f2 causare a una persona di avere ricoldi falsi?\n\nFacendo riferiferimento al passaggio riportato di sopra, la risposta corretta alla domanda data \u00e8\n<|pipe|>\nimmaginare ripetutamente azioni che non hanno mai fatto o eventi di cui non hanno mai avuto esperienza",
+    "id": 16,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "topic classification",
+    "context": "[Intestazione] Come viaggiare da solo come un anziano [titolo] Pianifica bene prima di andare : [step] Fai 2 copie dei tuoi documenti importanti (passaporto, patente di guida, carte di credito). Dare un mazzo di chiavi a qualcuno per la custodia a casa, e tenere l'altro con voi. [titolo] Fare molta ricerca.",
+    "task_input": "{{context}} [step] Leggere le guide sulla destinazione, naviga il web, unisciti a un forum-scopri di cosa hai bisogno di sapere riguardo la tua destinazione incluso il meteo, il terreno, gli ospedali, vaccini. [titolo]Visita il tuo dottore e ottieni le prescrizioni rinnovate, incluso per gli occhiali\nRiesci a identificare il tema del paragrafo?",
+    "task_output": "Viaggi",
+    "input": "<|tasktype|>\ntopic classification\n<|context|>\n[Intestazione] Come viaggiare da solo come un anziano [titolo] Pianifica bene prima di andare : [step] Fai 2 copie dei tuoi documenti importanti (passaporto, patente di guida, carte di credito). Dare un mazzo di chiavi a qualcuno per la custodia a casa, e tenere l'altro con voi. [titolo] Fare molta ricerca.\n<|task|>",
+    "output": "{{context}} [step] Leggere le guide sulla destinazione, naviga il web, unisciti a un forum-scopri di cosa hai bisogno di sapere riguardo la tua destinazione incluso il meteo, il terreno, gli ospedali, vaccini. [titolo]Visita il tuo dottore e ottieni le prescrizioni rinnovate, incluso per gli occhiali\nRiesci a identificare il tema del paragrafo?\n<|pipe|>\nViaggi",
+    "id": 17,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "topic classification",
+    "context": "Due giocatori di polo corrono attraverso il campo. Un giocatore cade dal suo cavallo, gli altri giocatori",
+    "task_input": "Qual'\u00e8 il tema della frase: {{context}}",
+    "task_output": "Giocare a polo",
+    "input": "<|tasktype|>\ntopic classification\n<|context|>\nDue giocatori di polo corrono attraverso il campo. Un giocatore cade dal suo cavallo, gli altri giocatori\n<|task|>",
+    "output": "Qual'\u00e8 il tema della frase: {{context}}\n<|pipe|>\nGiocare a polo",
+    "id": 18,
+    "control_status": "None"
+  },
+  {
+    "task_type": "topic classification",
+    "context": "[intestazione] Come fare un woo woo [titolo] Riempi un bicchiere da cocktail con ghiaccio, se lo desideri. [step] Scuoti questa bevanda con il ghiaccio, e poi filtrerai il ghiaccio. Se vuoi che la tua bevanda sia ancora pi\u00f9 fredda, aggiungi un paio di cubetti di ghiaccio nel bicchiere.",
+    "task_input": "Qual'\u00e8 il tema della frase: {{context}}",
+    "task_output": "Cibo e intrattenimento",
+    "input": "<|tasktype|>\ntopic classification\n<|context|>\n[intestazione] Come fare un woo woo [titolo] Riempi un bicchiere da cocktail con ghiaccio, se lo desideri. [step] Scuoti questa bevanda con il ghiaccio, e poi filtrerai il ghiaccio. Se vuoi che la tua bevanda sia ancora pi\u00f9 fredda, aggiungi un paio di cubetti di ghiaccio nel bicchiere.\n<|task|>",
+    "output": "Qual'\u00e8 il tema della frase: {{context}}\n<|pipe|>\nCibo e intrattenimento",
+    "id": 19,
+    "control_status": "None"
+  },
+  {
+    "task_type": "topic classification",
+    "context": "La donna lascia gi\u00f9 la corda e inizi\u00f2 a saltare senza la corda. La donna prende la corda e inizi\u00f2 a saltare tenendo la corda in una mano. La donna",
+    "task_input": "Qual'\u00e8 il tema della frase: {{context}}",
+    "task_output": "Salto con la corda",
+    "input": "<|tasktype|>\ntopic classification\n<|context|>\nLa donna lascia gi\u00f9 la corda e inizi\u00f2 a saltare senza la corda. La donna prende la corda e inizi\u00f2 a saltare tenendo la corda in una mano. La donna\n<|task|>",
+    "output": "Qual'\u00e8 il tema della frase: {{context}}\n<|pipe|>\nSalto con la corda",
+    "id": 20,
+    "control_status": "None"
+  },
+  {
+    "task_type": "natural language inference",
+    "context": "Le chiese di campagna non erano mai chiuse a chiave. Si poteva entrare in qualsiasi momento. Forse Cromwell quando pass\u00f2 trov\u00f2 anche la porta di Coldingham Priory chiusa a chiave e decise che sarebbe entrato comunque, anche se per farlo avrebbe dovuto rimuovere un intero muro.",
+    "task_input": "Supponi sia vero che {{context}} Allora, \"Cromwell sarebbe entrato in ogni caso\" \u00e8 sempre, a volte, o mai vero?",
+    "task_output": "Sempre",
+    "input": "<|tasktype|>\nnatural language inference\n<|context|>\nLe chiese di campagna non erano mai chiuse a chiave. Si poteva entrare in qualsiasi momento. Forse Cromwell quando pass\u00f2 trov\u00f2 anche la porta di Coldingham Priory chiusa a chiave e decise che sarebbe entrato comunque, anche se per farlo avrebbe dovuto rimuovere un intero muro.\n<|task|>",
+    "output": "Supponi sia vero che {{context}} Allora, \"Cromwell sarebbe entrato in ogni caso\" \u00e8 sempre, a volte, o mai vero?\n<|pipe|>\nSempre",
+    "id": 21,
+    "control_status": "None"
+  },
+  {
+    "task_type": "natural language inference",
+    "context": "A: Beh, cosa ne pensi riguardo le leggi sull'immigrazione? B: Al momento, penso che siano un po' restrittive. Particolarmente per, uh, certi gruppi etnici o da certi paesi. Mm, penso che dovremmo permettere, uh, pi\u00f9 immigrazione dall'Europa dell'est, per esempio, uh, particolarmente uh, gli ebrei, uh, uh, gente dalla Russia. Penso che potremmo permetterne pi\u00f9 di quelli che abbiamo permesso negli ultimi anni. Penso che abbiamo, uh, uh, troppe restrizioni uh, anche sugli orientali, ma, naturalmente, \u00e8 solo la mia opinione. A: S\u00ec, beh, io non so perch\u00e9 ho tirato fuori questo argomento, perch\u00e9 non penso che l'ho spuntato dalla lista perch\u00e9 so molto poco sulle attuali leggi sull'immigrazione.",
+    "task_input": "Dato {{context}} E' vera la frase \"ha spuntato l'argomento dalla lista\"? Si, no o forse?",
+    "task_output": "No",
+    "input": "<|tasktype|>\nnatural language inference\n<|context|>\nA: Beh, cosa ne pensi riguardo le leggi sull'immigrazione? B: Al momento, penso che siano un po' restrittive. Particolarmente per, uh, certi gruppi etnici o da certi paesi. Mm, penso che dovremmo permettere, uh, pi\u00f9 immigrazione dall'Europa dell'est, per esempio, uh, particolarmente uh, gli ebrei, uh, uh, gente dalla Russia. Penso che potremmo permetterne pi\u00f9 di quelli che abbiamo permesso negli ultimi anni. Penso che abbiamo, uh, uh, troppe restrizioni uh, anche sugli orientali, ma, naturalmente, \u00e8 solo la mia opinione. A: S\u00ec, beh, io non so perch\u00e9 ho tirato fuori questo argomento, perch\u00e9 non penso che l'ho spuntato dalla lista perch\u00e9 so molto poco sulle attuali leggi sull'immigrazione.\n<|task|>",
+    "output": "Dato {{context}} E' vera la frase \"ha spuntato l'argomento dalla lista\"? Si, no o forse?\n<|pipe|>\nNo",
+    "id": 22,
+    "control_status": "None"
+  },
+  {
+    "task_type": "natural language inference",
+    "context": "Ho trascorso poco pi\u00f9 di un'ora con Patterson che, ho scoperto in seguito, si \u00e8 rivelata essere un'altra novit\u00e0. Il tempo \u00e8 denaro in citt\u00e0 e poche persone valgono un'ora a meno che non sia durante il pranzo e solo allora se siete coinvolti in un'offerta di acquisto. \u00c8 stato anche uno dei pochi casi in cui qualcuno alla PKB poteva ricordare che Patterson doveva ricevere una porta chiusa e nessuno \u00e8 stato licenziato.",
+    "task_input": "Supponi sia vero che {{context}} Allora, \"Patterson doveva ricevere una porta chiusa e nessuno \u00e8 stato licenziato.\" \u00e8 sempre, a volte o mai vero?",
+    "task_output": "Sempre",
+    "input": "<|tasktype|>\nnatural language inference\n<|context|>\nHo trascorso poco pi\u00f9 di un'ora con Patterson che, ho scoperto in seguito, si \u00e8 rivelata essere un'altra novit\u00e0. Il tempo \u00e8 denaro in citt\u00e0 e poche persone valgono un'ora a meno che non sia durante il pranzo e solo allora se siete coinvolti in un'offerta di acquisto. \u00c8 stato anche uno dei pochi casi in cui qualcuno alla PKB poteva ricordare che Patterson doveva ricevere una porta chiusa e nessuno \u00e8 stato licenziato.\n<|task|>",
+    "output": "Supponi sia vero che {{context}} Allora, \"Patterson doveva ricevere una porta chiusa e nessuno \u00e8 stato licenziato.\" \u00e8 sempre, a volte o mai vero?\n<|pipe|>\nSempre",
+    "id": 23,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "natural language inference",
+    "context": "A: A volte si sentono cose alla radio che, sai, potrebbero essere vere o non esserlo. B: Uh-huh. A: Uh, ti la pensi cos\u00ec, credo che stanno spendendo un miliardo o gi\u00f9 di l\u00ec all' anno su questa ricerca sull'AIDS. B: Uh-huh. A: Pensi che dovrebbero spenderne di pi\u00f9?",
+    "task_input": "Dato il seguente {{context}} Allora, \u00e8 vero che \"dovrebbero spendere di pi\u00f9\"? Si, no o forse?",
+    "task_output": "Forse",
+    "input": "<|tasktype|>\nnatural language inference\n<|context|>\nA: A volte si sentono cose alla radio che, sai, potrebbero essere vere o non esserlo. B: Uh-huh. A: Uh, ti la pensi cos\u00ec, credo che stanno spendendo un miliardo o gi\u00f9 di l\u00ec all' anno su questa ricerca sull'AIDS. B: Uh-huh. A: Pensi che dovrebbero spenderne di pi\u00f9?\n<|task|>",
+    "output": "Dato il seguente {{context}} Allora, \u00e8 vero che \"dovrebbero spendere di pi\u00f9\"? Si, no o forse?\n<|pipe|>\nForse",
+    "id": 24,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "question generation",
+    "context": "Ho fatto una lavatrice ieri sera , e oserei dire che sono eccitata come una donna che \u00e8 appena passata da una pressa a una vera lavatrice elettrica di marca . O da un lavatorio a un strizzatore . Oppure da una pietra nel fiume a un lavatoio ... beh, hai capito .",
+    "task_input": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nHa appena comprato una lavatrice nuova",
+    "task_output": "Perch\u00e8 la donna era eccitata?",
+    "input": "<|tasktype|>\nquestion generation\n<|context|>\nHo fatto una lavatrice ieri sera , e oserei dire che sono eccitata come una donna che \u00e8 appena passata da una pressa a una vera lavatrice elettrica di marca . O da un lavatorio a un strizzatore . Oppure da una pietra nel fiume a un lavatoio ... beh, hai capito .\n<|task|>",
+    "output": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nHa appena comprato una lavatrice nuova\n<|pipe|>\nPerch\u00e8 la donna era eccitata?",
+    "id": 25,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "question generation",
+    "context": "Alla fine della sessione , ero cos\u00ec rilassato . Devo fare altre 2 sessioni fino a quando non inizier\u00e0 a sistemare il problema del collo di nuovo . Suggerirei definitivamente l'agopuntura per chiunque abbia un dolore muscolare grave .",
+    "task_input": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nIl narratore si far\u00e0 altre agopunture",
+    "task_output": "Cosa succeder\u00e0 se il dolore al collo non andr\u00e0 via immediatamente?",
+    "input": "<|tasktype|>\nquestion generation\n<|context|>\nAlla fine della sessione , ero cos\u00ec rilassato . Devo fare altre 2 sessioni fino a quando non inizier\u00e0 a sistemare il problema del collo di nuovo . Suggerirei definitivamente l'agopuntura per chiunque abbia un dolore muscolare grave .\n<|task|>",
+    "output": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nIl narratore si far\u00e0 altre agopunture .\n<|pipe|>\nCosa succeder\u00e0 se il dolore al collo non andr\u00e0 via immediatamente ?",
+    "id": 26,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "question generation",
+    "context": "Ogni giocatore pu\u00f2 essere colpito in qualsiasi momento ma in questo caso credo che Olivo avesse il diritto di essere arrabbiato . Il tiro con cui \u00e8 stato colpito era il terzo di fila nella stessa posizione alta e interna . Infatti al secondo tentativo la palla ha colpito la mazza di Olivo proprio sul pomello della mazza . \u00c8 incredibile che non sia stato colpito.",
+    "task_input": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nIl lanciatore sta tirando la palla vicino a Olivo .",
+    "task_output": "Perch\u00e9 ci potrebbe essere tensione tra Olivo e il lanciatore ?",
+    "input": "<|tasktype|>\nquestion generation\n<|context|>\nOgni giocatore pu\u00f2 essere colpito in qualsiasi momento ma in questo caso credo che Olivo avesse il diritto di essere arrabbiato . Il tiro con cui \u00e8 stato colpito era il terzo di fila nella stessa posizione alta e interna . Infatti al secondo tentativo la palla ha colpito la mazza di Olivo proprio sul pomello della mazza . \u00c8 incredibile che non sia stato colpito.\n<|task|>",
+    "output": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nIl lanciatore sta tirando la palla vicino a Olivo .\n<|pipe|>\nPerch\u00e9 ci potrebbe essere tensione tra Olivo e il lanciatore ?",
+    "id": 27,
+    "control_status": "None"
+  },
+  {
+    "task_type": "question generation",
+    "context": "I demoni lo vogliono cosicch\u00e9 l'Ordine non sia mai completo , gli angeli della giustizia lo vogliono contenuto , e un altro certo angelo femminile , di nome Ana , lo vuole per le sue ragioni personali . Vendetta . Ana ha sempre cercato di fare ci\u00f2 che \u00e8 giusto e giocare secondo le regole . Tutto questo \u00e8 cambiato quando gli angeli della giustizia hanno tradito la sua famiglia .",
+    "task_input": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nE' ricercato da tanti degli altri .",
+    "task_output": "Qual'\u00e8 la vicenda riguardo la persona di cui sta parlando il narratore ?",
+    "input": "<|tasktype|>\nquestion generation\n<|context|>\nI demoni lo vogliono cosicch\u00e9 l'Ordine non sia mai completo , gli angeli della giustizia lo vogliono contenuto , e un altro certo angelo femminile , di nome Ana , lo vuole per le sue ragioni personali . Vendetta . Ana ha sempre cercato di fare ci\u00f2 che \u00e8 giusto e giocare secondo le regole . Tutto questo \u00e8 cambiato quando gli angeli della giustizia hanno tradito la sua famiglia .\n<|task|>",
+    "output": "Basandoti sul contesto e sulla risposta, genera una domanda.\n\nContesto: {{context}}\n\nRisposta:\n\nE' ricercato da tanti degli altri .\n<|pipe|>\nQual'\u00e8 la vicenda riguardo la persona di cui sta parlando il narratore ?",
+    "id": 28,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "text generation",
+    "context": "W: Beh, hai ripulito il frigorifero questa volta. Non \u00e8 rimasto nulla.\n\nM: Oh, s\u00ec. Ho avuto un sacco di lavoro tutto il giorno e ho avuto solo un piccolo pranzo in ufficio.",
+    "task_input": "Data la domanda \"Cosa ha fatto l'uomo?\" e la risposta \"Ha mangiato tutto il cibo nel frigorifero\", scrivi una conversazione che potrebbe essere avvenuta.",
+    "task_output": "{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "input": "<|tasktype|>\ntext generation\n<|context|>\nW: Beh, hai ripulito il frigorifero questa volta. Non \u00e8 rimasto nulla.\n\nM: Oh, s\u00ec. Ho avuto un sacco di lavoro tutto il giorno e ho avuto solo un piccolo pranzo in ufficio.\n<|task|>",
+    "output": "Data la domanda \"Cosa ha fatto l'uomo?\" e la risposta \"Ha mangiato tutto il cibo nel frigorifero\", scrivi una conversazione che potrebbe essere avvenuta.\n<|pipe|>\n{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "id": 29,
+    "control_status": "Good"
+  },
+  {
+    "task_type": "text generation",
+    "context": "M: Quanto costa il quaderno?\n\nW: Tre yuan per uno, cinque yuan per due e sette yuan per tre.\n\nM: Allora. Ne prendo tre.",
+    "task_input": "Data la domanda \"Quando dovrebbe pagare l'uomo?\" e la risposta \"Sette yuan.\", scrivi una conversazione che potrebbe essere avvenuta.",
+    "task_output": "{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "input": "<|tasktype|>\ntext generation\n<|context|>\nM: Quanto costa il quaderno?\n\nW: Tre yuan per uno, cinque yuan per due e sette yuan per tre.\n\nM: Allora. Ne prendo tre.\n<|task|>",
+    "output": "Data la domanda \"Quando dovrebbe pagare l'uomo?\" e la risposta \"Sette yuan.\", scrivi una conversazione che potrebbe essere avvenuta.\n<|pipe|>\n{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "id": 30,
+    "control_status": "Bad"
+  },
+  {
+    "task_type": "text generation",
+    "context": "M: Sono quasi le sette. Andiamo.\n\nF: Senza fretta. La festa inizia alle sette e mezza.",
+    "task_input": "Data la domanda \"Dove stanno andando?\" e la risposta \"Stanno andando a una festa.\", scrivi una conversazione che potrebbe essere avvenuta.",
+    "task_output": "{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "input": "<|tasktype|>\ntext generation\n<|context|>\nM: Sono quasi le sette. Andiamo.\n\nF: Senza fretta. La festa inizia alle sette e mezza.\n<|task|>",
+    "output": "Data la domanda \"Dove stanno andando?\" e la risposta \"Stanno andando a una festa.\", scrivi una conversazione che potrebbe essere avvenuta..\n<|pipe|>\n{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "id": 31,
+    "control_status": "None"
+  },
+  {
+    "task_type": "text generation",
+    "context": "W: Non riesco a decidere se andare all'universit\u00e0 o trovare un lavoro. Qual \u00e8 la tua opinione?\n\nM: Beh, se fossi in te, continuerei a studiare.\n\nW: Ma io non so nemmeno cosa studiare.\n\nM: Ti consiglio di specializzarti in economia.\n\nW: \u00c8 quello che i miei genitori vogliono che faccia.\n\nM: Dovresti seguire i loro consigli. Sanno cosa \u00e8 meglio per te. Pi\u00f9 impari, migliore sar\u00e0 il lavoro che otterrai.\n\nW: Ma i miei amici avranno un lavoro e si divertiranno molto mentre io passer\u00f2 tutto il mio tempo a leggere e scrivere.\n\nM: Ma se vai all'universit\u00e0, avrai comunque del tempo per divertirti.\n\nW: Quello che dici ha senso. Ci penser\u00f2. Grazie per il tuo consiglio.",
+    "task_input": "Data la domanda \"Qual'\u00e8 il problema della ragazza?\" e la risposta \"Non riesce a decidere se andare all'universit\u00e0 o trovare un lavoro.\", scrivi una conversazione che potrebbe essere avvenuta.",
+    "task_output": "{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "input": "<|tasktype|>\ntext generation\n<|context|>\nW: Non riesco a decidere se andare all'universit\u00e0 o trovare un lavoro. Qual \u00e8 la tua opinione?\n\nM: Beh, se fossi in te, continuerei a studiare.\n\nW: Ma io non so nemmeno cosa studiare.\n\nM: Ti consiglio di specializzarti in economia.\n\nW: \u00c8 quello che i miei genitori vogliono che faccia.\n\nM: Dovresti seguire i loro consigli. Sanno cosa \u00e8 meglio per te. Pi\u00f9 impari, migliore sar\u00e0 il lavoro che otterrai.\n\nW: Ma i miei amici avranno un lavoro e si divertiranno molto mentre io passer\u00f2 tutto il mio tempo a leggere e scrivere.\n\nM: Ma se vai all'universit\u00e0, avrai comunque del tempo per divertirti.\n\nW: Quello che dici ha senso. Ci penser\u00f2. Grazie per il tuo consiglio.\n<|task|>",
+    "output": "Data la domanda \"Qual'\u00e8 il problema della ragazza?\" e la risposta \"Non riesce a decidere se andare all'universit\u00e0 o trovare un lavoro.\", scrivi una conversazione che potrebbe essere avvenuta.\n<|pipe|>\n{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
+    "id": 32,
+    "control_status": "Bad"
+  }
+]

@@ -1,0 +1,182 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<PageTitle>Validazione Frase</PageTitle>
+
+<h3>CAPTCHA: Clicca su una parola per correggerla</h3>
+
+@if (!string.IsNullOrEmpty(sentence))
+{
+    <div class="sentence-container">
+        @foreach (var (token, index) in tokens.Select((value, i) => (value, i)))
+        {
+            @if (token.IsClickable)
+            {
+                <span class="@(editingIndex == index ? "selected-word" : "clickable-word")"
+                    @onclick="() => WordClicked(index, token.Text)">
+                    @token.Text
+                </span>
+            }
+            else
+            {   
+                <span class="punctuation">@token.Text</span>
+            }
+        }
+    </div>
+    
+    <hr /> 
+
+
+    <div class="edit-section">
+        @if (editingIndex != -1)
+        {
+            <div class="edit-controls">
+                <label>Modifica la parola "<strong>@originalWordValue</strong>":</label>
+                <input @bind="newWordValue" class="form-control" placeholder="Scrivi la nuova parola..." />
+                <button class="btn btn-secondary" @onclick="CancelEdit">Annulla Selezione</button>
+            </div>
+        }
+
+    
+        <div class="submit-controls">
+            <button class="btn btn-success" @onclick="SubmitAsCorrect">
+                <span class="oi oi-check" aria-hidden="true"></span> La frase è già corretta
+            </button>
+            <button class="btn btn-info" @onclick="SubmitCorrection">
+                <span class="oi oi-data-transfer-upload" aria-hidden="true"></span> Invia Correzione
+            </button>
+        </div>
+    </div>
+}
+else
+{
+    <p>@loadingMessage</p>
+}
+
+
+@code {
+    private DateTime sentenceLoadTime;
+    private int currentSentenceId = -1;
+    private string sentence = string.Empty;
+    private List<WordToken> tokens = new List<WordToken>(); 
+    private string loadingMessage = "Sto contattando il backend per ricevere la frase...";
+
+    private int editingIndex = -1;
+    private string originalWordValue = string.Empty;
+    private string newWordValue = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            SentenceDto? sentenceDto = await Http.GetFromJsonAsync<SentenceDto>("http://localhost:5544/getsentence");
+            
+            if (sentenceDto != null)
+            {
+                currentSentenceId = sentenceDto.originalSentenceId; 
+                sentence = sentenceDto.text;
+                var regex = new System.Text.RegularExpressions.Regex(@"\w+|[^\s\w]");
+                tokens = regex.Matches(sentence)
+                    .Select(match => new WordToken
+                    {
+                        Text = match.Value,
+                        IsClickable = System.Text.RegularExpressions.Regex.IsMatch(match.Value, @"\w")
+                    })
+                    .ToList();
+
+                sentenceLoadTime = DateTime.UtcNow;
+            }
+            else
+            {
+                loadingMessage = "Il backend non ha restituito una frase valida.";
+            }
+        }
+        catch (Exception ex)
+        {
+            loadingMessage = $"Errore durante la connessione al backend: {ex.Message}";
+        }
+    }
+
+    private void WordClicked(int index, string word)
+    {
+        Console.WriteLine($"DEBUG: Cliccata la parola '{word}' all'indice {index}.");
+        editingIndex = index;
+        originalWordValue = word;
+        newWordValue = word; 
+        StateHasChanged(); 
+    }
+    
+    private void CancelEdit()
+    {
+        editingIndex = -1;
+        originalWordValue = string.Empty;
+        newWordValue = string.Empty;
+        StateHasChanged();
+    }
+
+    private async void SubmitAsCorrect()
+    {
+        Console.WriteLine("DEBUG: SubmitAsCorrect cliccato!");
+        if (currentSentenceId == -1) return;
+        var interactionTime = (DateTime.UtcNow - sentenceLoadTime).TotalSeconds;
+        var submission = new
+        {
+            SentenceId = currentSentenceId,
+            Action = "MarkedAsCorrect",
+            InteractionTimeInSeconds = interactionTime
+        };
+
+        // Invia i dati al backend
+        await Http.PostAsJsonAsync("http://localhost:5544/submit-result", submission);
+        await InvokeAsync(LoadNewSentence);
+    }
+
+    private async void SubmitCorrection()
+    {
+        Console.WriteLine("DEBUG: SubmitCorrection cliccato!");
+        if (currentSentenceId == -1 || editingIndex == -1)
+        {
+            Console.WriteLine("DEBUG: Invio annullato, nessuna parola in modifica.");
+            return;
+        }
+        var interactionTime = (DateTime.UtcNow - sentenceLoadTime).TotalSeconds;
+        
+        var submission = new
+        {
+            SentenceId = currentSentenceId,
+            Action = "CorrectionSubmitted",
+            WordPosition = editingIndex,       
+            OriginalWord = originalWordValue, 
+            NewWord = newWordValue,            
+            InteractionTimeInSeconds = interactionTime
+        };
+        
+        Console.WriteLine("DEBUG: Invio della correzione in corso...");
+        await Http.PostAsJsonAsync("http://localhost:5544/submit-result", submission);
+        await InvokeAsync(LoadNewSentence);
+    }
+    
+    private async Task LoadNewSentence()
+    {
+        sentence = string.Empty;
+        tokens = new List<WordToken>(); 
+        CancelEdit(); 
+        StateHasChanged();
+        await OnInitializedAsync();
+    }
+
+    public class WordToken
+    {
+        public string Text { get; set; } = "";
+
+        public bool IsClickable { get; set; }
+    }
+
+    
+    public class SentenceDto
+    {
+        public int captchaSentenceId { get; set; }
+        public int originalSentenceId { get; set; }
+        public string text { get; set; } = "";
+    }
+}

@@ -1,0 +1,133 @@
+@page "/statistics"
+@inject HttpClient Http
+@using System.Text.Json // Necessario per deserializzare
+
+<PageTitle>Statistiche CAPTCHA</PageTitle>
+
+<h1>Pannello Statistiche</h1>
+
+<div class="stats-container">
+
+    <div class="sentences-list">
+        <h4>Frasi Originali</h4>
+        @if (allSentences != null)
+        {
+            <ul>
+                @foreach (var sentence in allSentences)
+                {
+                    <li @onclick="() => LoadSentenceDetails(sentence.Id)"
+                        class="@(selectedSentence?.Id == sentence.Id ? "active" : "")">
+                        <strong>ID @sentence.Id:</strong> @sentence.Context
+                    </li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>Caricamento frasi...</p>
+        }
+    </div>
+
+
+    <div class="details-view">
+        @if (selectedSentence != null)
+        {
+            <h4>Dettagli Frase ID: @selectedSentence.Id</h4>
+            
+            <div class="stat-box">
+                <strong>Proposta:</strong> @selectedSentence.TimesProposed volte <br />
+                <strong>Valutata corretta:</strong> @selectedSentence.TimesMarkedAsCorrect volte
+            </div>
+
+            <h5>Metatemplate Completo</h5>
+            <pre class="metatemplate-box">@JsonSerializer.Serialize(selectedSentence, new JsonSerializerOptions { WriteIndented = true })</pre>
+
+            <h5>Correzioni Suggerite (ordinate per popolarità)</h5>
+            @if (correctionsForSelected != null && correctionsForSelected.Any())
+            {
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Posizione</th>
+                            <th>Parola Originale</th>
+                            <th>Parola Suggerita</th>
+                            <th>Voti</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var correction in correctionsForSelected)
+                        {
+                            <tr>
+                                <td>@correction.WordPosition</td>
+                                <td>@correction.OriginalWord</td>
+                                <td>@correction.SuggestedWord</td>
+                                <td>@correction.SubmissionCount</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <p>Nessuna correzione suggerita per questa frase.</p>
+            }
+        }
+        else
+        {
+            <p>Seleziona una frase dalla lista a sinistra per vedere i dettagli.</p>
+        }
+    </div>
+</div>
+
+@code {
+
+    private List<SentenceSummary>? allSentences;
+    private OriginalSentence? selectedSentence;
+    private List<SuggestedCorrection>? correctionsForSelected;
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        allSentences = await Http.GetFromJsonAsync<List<SentenceSummary>>("http://localhost:5544/statistics/all-sentences");
+    }
+
+    private async Task LoadSentenceDetails(int sentenceId)
+    {
+        var sentenceTask = Http.GetFromJsonAsync<OriginalSentence>($"http://localhost:5544/statistics/sentence-details/{sentenceId}");
+        var correctionsTask = Http.GetFromJsonAsync<List<SuggestedCorrection>>($"http://localhost:5544/statistics/corrections/{sentenceId}");
+
+        await Task.WhenAll(sentenceTask, correctionsTask);
+
+        selectedSentence = await sentenceTask;
+        correctionsForSelected = await correctionsTask;
+    }
+
+    public class SentenceSummary
+    {
+        public int Id { get; set; }
+        public string Context { get; set; } = "";
+    }
+
+    public class OriginalSentence
+    {
+        public int Id { get; set; }
+        public string Task_type { get; set; } = "";
+        public string Context { get; set; } = "";
+        public string Task_input { get; set; } = "";
+        public string Task_output { get; set; } = "";
+        public string Input { get; set; } = "";
+        public string Output { get; set; } = "";
+        public int TimesProposed { get; set; }
+        public int TimesMarkedAsCorrect { get; set; }
+    }
+
+    public class SuggestedCorrection
+    {
+        public int Id { get; set; }
+        public int OriginalSentenceId { get; set; }
+        public int WordPosition { get; set; }
+        public string OriginalWord { get; set; } = "";
+        public string SuggestedWord { get; set; } = "";
+        public int SubmissionCount { get; set; }
+    }
+}
