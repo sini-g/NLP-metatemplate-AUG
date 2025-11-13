@@ -26,7 +26,8 @@ class WordNetAugmenter:
             'candidates_evaluated': 0,  # Candidati valutati per similarity
             'candidates_passing_threshold': 0,  # Candidati sopra threshold
             'pos_errors_in_substitutions': 0,  # Errori POS nelle sostituzioni finali
-            'morphology_errors_in_substitutions': 0  # Errori morfologici nelle sostituzioni finali
+            'morphology_errors_in_substitutions': 0,  # Errori morfologici nelle sostituzioni finali
+            'general_errors_in_substitutions': 0  # Errori generici nelle sostituzioni finali
         }
 
     def embed(self, text):
@@ -279,6 +280,10 @@ class WordNetAugmenter:
                         # Verifica POS della sostituzione finale
                         if not self.validate_pos(synonym, token_info['pos']):
                             self.stats['pos_errors_in_substitutions'] += 1
+                            self.stats['general_errors_in_substitutions'] += 1
+                            flag = True  # Flag per capire se ci sono errori in entrambe le validazioni
+                        else:
+                            flag = False
 
                         # Verifica morfologia della sostituzione finale
                         if not self.validate_morphology(synonym,
@@ -287,6 +292,12 @@ class WordNetAugmenter:
                                                          'person': token_info['person'],
                                                          'tense': token_info['tense']}):
                             self.stats['morphology_errors_in_substitutions'] += 1
+                            self.stats['general_errors_in_substitutions'] += 1
+                        else:
+                            flag = False
+
+                        if flag:
+                            self.stats['general_errors_in_substitutions'] -= 1
 
                         if word[0].isupper():
                             synonym = synonym.capitalize()
@@ -388,8 +399,7 @@ class WordNetAugmenter:
 
             # Calcola tasso di correttezza
             correct_substitutions = (self.stats['total_substitutions'] -
-                                     self.stats['pos_errors_in_substitutions'] -
-                                     self.stats['morphology_errors_in_substitutions'])
+                                     self.stats['general_errors_in_substitutions'])
             correctness_rate = (correct_substitutions / self.stats['total_substitutions']) * 100
 
             print(f"\n  • Sostituzioni corrette:                    {correct_substitutions}")
