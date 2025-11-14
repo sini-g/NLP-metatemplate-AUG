@@ -254,5 +254,101 @@
     "task_output": "{{context}}| join(\"\n\n\") | string | truncate(2048) }}",
     "input": "<|tasktype|>\ntext generation\n<|context|>\nW: Non riesco a decidere se andare all'università o trovare un lavoro. Qual è la tua opinione?\n\nM: Beh, se fossi in te, continuerei a studiare.\n\nW: Ma io non so nemmeno cosa studiare.\n\nM: Ti consiglio di specializzarti in economia.\n\nW: È quello che i miei genitori vogliono che faccia.\n\nM: Dovresti seguire i loro consigli. Sanno cosa è meglio per te. Più impari, migliore sarà il lavoro che otterrai.\n\nW: Ma i miei amici avranno un lavoro e si divertiranno molto mentre io passerò tutto il mio tempo a leggere e scrivere.\n\nM: Ma se vai all'università, avrai comunque del tempo per divertirti.\n\nW: Quello che dici ha senso. Ci penserò. Grazie per il tuo consiglio.\n<|task|>",
     "output": "Data la domanda \"Qual'è il problema della ragazza?\" e la risposta \"Non riesce a decidere se andare all'università o trovare un lavoro.\", scrivi una conversazione che potrebbe essere avvenuta.\n<|pipe|>\n{{context}}| join(\"\n\n\") | string | truncate(2048) }}"
+  },
+  {
+    "task_type": "yes-no question answering",
+    "context": "Kai è uscita dalla doccia e ha scelto il suo vestito migliore per andare ad un appuntamento.",
+    "task_input": "{{context}}\n\nData la domanda \"Come descriveresti Kai?\", \"preparata\" è una risposta valida?",
+    "task_output": "Sì",
+    "input": "<|tasktype|>\nyes-no question answering\n<|context|>\nKai è uscita dalla doccia e ha scelto il suo vestito migliore per andare ad un appuntamento.\n<|task|>",
+    "output": "{{context}}\n\nData la domanda \"Come descriveresti Kai?\", \"preparata\" è una risposta valida?\n<|pipe|>\nSì"
+  },
+  {
+    "task_type": "yes-no question answering",
+    "context": "Addison ha aumentato la quantità d'acqua aumentando il volume all'interno della brocca.",
+    "task_input": "{{context}}\n\nData la domanda \"Cosa vorrà fare Addison adesso?\", \"versare l'acqua\" è una risposta valida?",
+    "task_output": "Sì",
+    "input": "<|tasktype|>\nyes-no question answering\n<|context|>\nAddison ha aumentato la quantità d'acqua aumentando il volume all'interno della brocca.\n<|task|>",
+    "output": "{{context}}\n\nData la domanda \"Cosa vorrà fare Addison dopo?\", \"versare l'acqua\" è una risposta valida?\n<|pipe|>\nSì"
+  },
+  {
+    "task_type": "yes-no question answering",
+    "context": "Austin se n'è andato infuriato dopo essere stato espulso dalla riunione con le altre persone.",
+    "task_input": "{{context}}\n\nData la domanda \"Come si sarebbe sentito Austin dopo?\", \"molto arrabbiato\" è una risposta valida?",
+    "task_output": "Sì",
+    "input": "<|tasktype|>\nyes-no question answering\n<|context|>\nAustin se n'è andato infuriato dopo essere stato cacciato dalla riunione con le altre persone.\n<|task|>",
+    "output": "{{context}}\n\nData la domanda \"Come si sentirebbe Austin dopo?\", \"molto turbato\" è una risposta valida?\n<|pipe|>\nSì"
+  },
+  {
+    "task_type": "yes-no question answering",
+    "context": "Lee ha completato tutto il lavoro della giornata in anticipo e ha avuto del tempo libero.",
+    "task_input": "{{context}}\n\nData la domanda \"Cosa vorrà fare Lee adesso?\", \"diventare ricco\" è una risposta valida?",
+    "task_output": "No",
+    "input": "<|tasktype|>\nyes-no question answering\n<|context|>\nLee ha completato tutto il lavoro della giornata in anticipo e ha avuto del tempo libero.\n<|task|>",
+    "output": "{{context}}\n\nData la domanda \"Cosa vorrà fare Lee adesso?\", \"diventare ricco\" è una risposta valida?\n<|pipe|>\nNo"
+  },
+  {
+    "task_type": "sentence completion",
+    "context": "Un uomo in un rodeo sta eseguendo un'acrobazia. Un uomo",
+    "task_input": "Completa la frase: {{context}}",
+    "task_output": "sta cavalcando un cavallo in un rodeo.",
+    "input": "<|tasktype|>\nsentence completion\n<|context|>\nUn uomo in un rodeo sta eseguendo un'acrobazia. Un uomo\n<|task|>",
+    "output": "Completa la frase: {{context}}\n<|pipe|>\nsta cavalcando un cavallo in un rodeo."
+  },
+  {
+    "task_type": "sentence completion",
+    "context": "Due donne sono in piedi davanti a un negozio di carnevale. Stanno lanciando freccette contro dei palloncini, cercando di farli scoppiare. Loro",
+    "task_input": "Come inizieresti la frase:\ncontinuano finché non hanno fatto scoppiare abbastanza palloncini.",
+    "task_output": "{{context}}",
+    "input": "<|tasktype|>\nsentence completion\n<|context|>\nDue donne sono in piedi davanti a un negozio di carnevale. Stanno lanciando freccette contro dei palloncini, cercando di farli scoppiare. Loro\n<|task|>",
+    "output": "Come inizieresti la frase:\ncontinuano finché non hanno fatto scoppiare abbastanza palloncini.\n<|pipe|>\n{{context}}"
+  },
+  {
+    "task_type": "sentence completion",
+    "context": "[intestazione] Come stuccare le piastrelle delle pareti [titolo] Indossare protezioni di sicurezza. [passaggio] Utilizzare guanti di gomma, protezioni per gli occhi e un grembiule. Se non indossi dispositivi di protezione, potresti ferirti.",
+    "task_input": "Come inizieresti la frase:\nQuesto vale in particolare per gli occhiali protettivi, poiché senza di essi potresti ricevere gocce di stucco negli occhi. [substeps] Assicurati che la stanza in cui stai lavorando sia adeguatamente ventilata.",
+    "task_output": "{{context}}",
+    "input": "<|tasktype|>\nsentence completion\n<|context|>\n[intestazione] Come stuccare le piastrelle delle pareti [titolo] Indossare dispositivi di protezione. [passaggio] Utilizzare guanti di gomma, occhiali protettivi e un grembiule. Se non indossi dispositivi di protezione, potresti ferirti.\n<|task|>",
+    "output": "Come inizieresti la frase:\nQuesto vale in particolare per gli occhiali protettivi, poiché senza di essi potresti ricevere gesso negli occhi. [substeps] Assicurati che la stanza in cui stai lavorando sia adeguatamente ventilata.\n<|pipe|>\n{{context}}"
+  },
+  {
+    "task_type": "sentence completion",
+    "context": "Due persone sono in una stanza e giocano a pallone contro il muro. Un uomo con una maglietta gialla",
+    "task_input": "Se la descrizione di una situazione inizia così: {{context}}... Come continua?\n\nFinale 1: parla alla telecamera prima di salire sul muro e colpire qualcosa.\n\nFinale 2: brandisce la racchetta e colpisce la palla.\n\nFinale 3: entra e alza le braccia al cielo.\n\nFinale 4: entra e inizia a parlare alla telecamera.",
+    "task_output": "Finale 2",
+    "input": "<|tasktype|>\nsentence completion\n<|context|>\nDue persone sono in una stanza e giocano a pallone contro il muro. Un uomo con una maglietta gialla\n<|task|>",
+    "output": "Se la descrizione di una situazione inizia così: {{context}}... Come continua?\n\nFinale 1: parla alla telecamera prima di salire sul muro e colpire qualcosa.\n\nFinale 2: brandisce la racchetta e colpisce la palla.\n\nFinale 3: entra e alza le braccia al cielo.\n\nFinale 4: entra e inizia a parlare alla telecamera.\n<|pipe|>\nFinale 2"
+  },
+  {
+    "task_type": "paraphrase identification",
+    "context": "Il Lago Bordaglia è un lago a Forni Avoltri, provincia di Udine, Friuli-Venezia Giulia, Italia.",
+    "task_input": "{{context}} Domanda: Il Lago Bordaglia è un lago a Forni Avoltri, Provincia di Udine, Friuli-Venezia Giulia, Italia. Vero o Falso?",
+    "task_output": "Vero",
+    "input": "<|tasktype|>\nparaphrase identification\n<|context|>\nIl Lago Bordaglia è un lago a Forni Avoltri, provincia di Udine, Friuli-Venezia Giulia, Italia.\n<|task|>",
+    "output": "{{context}} Domanda: Il Lago Bordaglia è un lago a Forni Avoltri, Provincia di Udine, Friuli-Venezia Giulia, Italia. Vero o Falso?\n<|pipe|>\nVero"
+  },
+  {
+    "task_type": "paraphrase identification",
+    "context": "Il figlio di Robert Edward Turner, Ted Turner, ha ereditato l'azienda quando il vecchio Turner è morto nel 1963.",
+    "task_input": "Frase 1: {{context}}\nFrase 2: Il figlio di Turner, Robert Edward Turner, ha ereditato l'azienda quando il vecchio Ted Turner è morto nel 1963.\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?",
+    "task_output": "No",
+    "input": "<|tasktype|>\nparaphrase identification\n<|context|>\nIl figlio di Robert Edward Turner, Ted Turner, ha ereditato l'azienda quando il vecchio Turner è morto nel 1963.\n<|task|>",
+    "output": "Frase 1: {{context}}\nFrase 2: Il figlio di Turner, Robert Edward Turner, ha ereditato l'azienda quando il vecchio Ted Turner è morto nel 1963.\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?\n<|pipe|>\nNo"
+  },
+  {
+    "task_type": "paraphrase identification",
+    "context": "Secondo il censimento del 2002 dell'Istituto Nazionale di Statistica, Toltén ha una superficie di e conta 11.216 abitanti (5.827 uomini e 5.389 donne).",
+    "task_input": "Frase 1: {{context}}\nFrase 2: Secondo il censimento del 2002 dell'Istituto Nazionale di Statistica, Toltén ha una superficie di 11.216 abitanti (5.827 uomini e 5.389 donne).\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?",
+    "task_output": "Sì",
+    "input": "<|tasktype|>\nparaphrase identification\n<|context|>\nSecondo il censimento del 2002 dell'Istituto Nazionale di Statistica, Toltén ha una superficie di e conta 11.216 abitanti (5.827 uomini e 5.389 donne).\n<|task|>",
+    "output": "Frase 1: {{context}}\nFrase 2: Secondo il censimento del 2002 dell'Istituto Nazionale di Statistica, Toltén ha una superficie di 11.216 abitanti (5.827 uomini e 5.389 donne).\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?\n<|pipe|>\nSì"
+  },
+  {
+    "task_type": "paraphrase identification",
+    "context": "Il software potrebbe essere ancora in fase di sviluppo e non essere ancora utilizzabile dall'utente finale.",
+    "task_input": "Frase 1: {{context}}\nFrase 2: Il software è ancora in fase di sviluppo e non è ancora utilizzabile dall'utente finale.\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?",
+    "task_output": "Sì",
+    "input": "<|tasktype|>\nparaphrase identification\n<|context|>\nIl software potrebbe essere ancora in fase di sviluppo e non essere ancora utilizzabile dall'utente finale.\n<|task|>",
+    "output": "Frase 1: {{context}}\nFrase 2: Il software è ancora in fase di sviluppo e non è ancora utilizzabile dall'utente finale.\nDomanda: Le Frasi 1 e 2 esprimono lo stesso significato? Sì o No?\n<|pipe|>\nSì"
   }
 ]

@@ -412,7 +412,7 @@ def main():
 
     # Carica il dataset originale
     print("\nCaricamento del dataset...")
-    with open('meta_templates_reduced.json', 'r', encoding='utf-8') as f:
+    with open('../meta_templates_reduced.json', 'r', encoding='utf-8') as f:
         original_data = json.load(f)
 
     print(f"Dataset caricato: {len(original_data)} elementi")
@@ -447,7 +447,7 @@ def main():
     augmenter.print_statistics()
 
     # Salva il dataset aumentato
-    output_file = 'meta_templates_reduced_augmented_wordnet.json'
+    output_file = '../augmented_data/meta_templates_reduced_augmented_wordnet.json'
     print(f"\nSalvataggio del dataset in '{output_file}'...")
 
     with open(output_file, 'w', encoding='utf-8') as f:
